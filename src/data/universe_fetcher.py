@@ -1,13 +1,13 @@
 """Fetch and maintain the universe of Thai SET-listed stocks.
 
-This module maintains a curated universe of SET50 (Stock Exchange of Thailand)
-stocks for screening. Since Thailand's exchange does not offer a free public
-FTP feed like NASDAQ, the universe is maintained as a curated list that you
-update manually twice a year when SET revises SET50 (each January and July).
+This module fetches all active SET and mai stocks from the TradingView scanner API.
+It automatically filters out warrants, DWs, and funds to focus on common stocks,
+and appends the '.BK' suffix required by yfinance.
 """
 
 import logging
 import pickle
+import requests
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List
@@ -20,76 +20,15 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-
-# Curated SET50 constituent list (base symbols, without .BK suffix).
-# Source: SET official constituents list / Wikipedia, as of 2025-2026 revision.
-# NOTE: SET revises SET50 twice a year (effective Jan 1 and Jul 1).
-# Update this list from https://www.set.or.th/en/market/index/set50/overview
-# when a new revision is announced.
-SET50_SYMBOLS: Dict[str, str] = {
-    "ADVANC": "Advanced Info Service",
-    "AOT": "Airports of Thailand",
-    "AWC": "Asset World Corp",
-    "BANPU": "Banpu",
-    "BBL": "Bangkok Bank",
-    "BCP": "Bangchak Corporation",
-    "BDMS": "Bangkok Dusit Medical Service",
-    "BEM": "Bangkok Expressway and Metro",
-    "BH": "Bumrungrad International Hospital",
-    "BJC": "Berli Jucker",
-    "BTS": "BTS Group Holdings",
-    "CBG": "Carabao Group",
-    "CCET": "Cal-Comp Electronics (Thailand)",
-    "COM7": "Com Seven",
-    "CPALL": "CP All",
-    "CPF": "Charoen Pokphand Foods",
-    "CPN": "Central Pattana",
-    "CRC": "Central Retail Corporation",
-    "DELTA": "Delta Electronics (Thailand)",
-    "EGCO": "Electricity Generating",
-    "GPSC": "Global Power Synergy",
-    "GULF": "Gulf Development",
-    "HMPRO": "Home Product Center",
-    "IVL": "Indorama Ventures",
-    "KBANK": "Kasikornbank",
-    "KCE": "KCE Electronics",
-    "KKP": "Kiatnakin Phatra Bank",
-    "KTB": "Krungthai Bank",
-    "KTC": "Krungthai Card",
-    "LH": "Land and Houses",
-    "MINT": "Minor International",
-    "MTC": "Muangthai Capital",
-    "OR": "PTT Oil and Retail Business",
-    "OSP": "Osotspa",
-    "PTT": "PTT",
-    "PTTEP": "PTT Exploration and Production",
-    "PTTGC": "PTT Global Chemical",
-    "RATCH": "Ratch Group",
-    "SCB": "Siam Commercial Bank",
-    "SCC": "Siam Cement Group",
-    "SCGP": "SCG Packaging",
-    "TCAP": "Thanachart Capital",
-    "TIDLOR": "Tidlor Holdings",
-    "TISCO": "Tisco Financial Group",
-    "TLI": "Thai Life Insurance",
-    "TOP": "Thai Oil",
-    "TRUE": "TRUE Corporation",
-    "TTB": "TMBThanachart Bank",
-    "TU": "Thai Union Group",
-    "VGI": "VGI",
-    "WHA": "WHA Corporation",
-}
-
 # yfinance requires this suffix for SET-listed tickers
 SET_SUFFIX = ".BK"
 
 
 class USStockUniverseFetcher:
-    """Fetches and maintains the universe of SET50-listed Thai stocks.
+    """Fetches and maintains the universe of all SET-listed Thai stocks.
 
     Class name kept as USStockUniverseFetcher so the rest of the codebase
-    (fetcher.py, run_optimized_scan.py, etc.) does not need to change its
-    imports. Internally it now returns Thai SET tickers instead of US ones.
+    does not need to change its imports. Internally it now fetches all Thai SET tickers.
     """
 
     def __init__(self, cache_dir: str = "./data/cache"):
@@ -100,25 +39,55 @@ class USStockUniverseFetcher:
         """
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
-        self.cache_file = self.cache_dir / "thai_stock_universe.pkl"
-        logger.info("USStockUniverseFetcher initialized (Thai SET50 mode)")
+        self.cache_file = self.cache_dir / "thai_all_stock_universe.pkl"
+        logger.info("USStockUniverseFetcher initialized (Thai ALL STOCKS mode via TradingView)")
 
-    def _build_set50_dataframe(self) -> pd.DataFrame:
-        """Build a DataFrame of SET50 stocks with .BK suffix applied.
+    def _fetch_all_set_symbols(self) -> pd.DataFrame:
+        """Fetch all Thai stocks from TradingView Scanner API.
 
         Returns:
             DataFrame with columns ['symbol', 'name']
         """
-        rows = [
-            {"symbol": f"{symbol}{SET_SUFFIX}", "name": name}
-            for symbol, name in SET50_SYMBOLS.items()
-        ]
-        df = pd.DataFrame(rows)
-        logger.info(f"Built SET50 universe with {len(df)} stocks")
-        return df
+        url = "https://scanner.tradingview.com/thailand/scan"
+        payload = {
+            "columns": ["name", "type", "subtype"],
+            "range": [0, 5000] # Set high enough to catch all ~800+ stocks
+        }
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "Content-Type": "application/json"
+        }
+        
+        try:
+            logger.info("Fetching stock list from TradingView API...")
+            response = requests.post(url, json=payload, headers=headers)
+            response.raise_for_status()
+            data = response.json()
+            
+            symbols = []
+            for item in data.get('data', []):
+                ticker_data = item.get('d', [])
+                if len(ticker_data) >= 2:
+                    ticker = ticker_data[0]
+                    asset_type = ticker_data[1]
+                    
+                    # กรองเอาเฉพาะหุ้นสามัญ (stock) ตัดพวก Warrant, DW ออก
+                    if asset_type == 'stock':
+                        symbols.append({
+                            "symbol": f"{ticker}{SET_SUFFIX}", 
+                            "name": ticker
+                        })
+            
+            df = pd.DataFrame(symbols)
+            logger.info(f"Successfully fetched {len(df)} Thai stocks.")
+            return df
+            
+        except Exception as e:
+            logger.error(f"Error fetching symbols from TradingView: {e}")
+            return pd.DataFrame()
 
     def fetch_universe(self, force_refresh: bool = False) -> List[str]:
-        """Fetch the universe of SET50-listed Thai stocks.
+        """Fetch the universe of all Thai stocks.
 
         Args:
             force_refresh: Force refresh even if cached data is recent
@@ -139,12 +108,12 @@ class USStockUniverseFetcher:
                 logger.info(f"Loaded {len(cached_data['symbols'])} symbols from cache")
                 return cached_data['symbols']
 
-        logger.info("Building SET50 universe...")
+        logger.info("Building SET full universe...")
 
-        all_stocks = self._build_set50_dataframe()
+        all_stocks = self._fetch_all_set_symbols()
 
         if all_stocks.empty:
-            logger.error("Failed to build SET50 universe")
+            logger.error("Failed to build SET universe. Check network or API.")
             return []
 
         # Remove duplicates, sort
@@ -159,7 +128,7 @@ class USStockUniverseFetcher:
             'fetch_date': datetime.now().isoformat(),
             'count': len(symbols),
             'metadata': {
-                'source': 'SET50 curated list',
+                'source': 'TradingView Scanner API',
                 'filtered_count': len(symbols)
             }
         }
