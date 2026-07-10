@@ -30,6 +30,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Thailand SET Index ticker on yfinance (was 'SPY' for the US S&P 500 ETF)
+BENCHMARK_TICKER = "^SET.BK"
+
 
 class OptimizedBatchProcessor:
     """Optimized batch processor with parallel processing and smart rate limiting."""
@@ -66,6 +69,10 @@ class OptimizedBatchProcessor:
         # Effective TPS = max_workers / rate_limit_delay
         effective_tps = max_workers / rate_limit_delay
 
+        # NOTE: names kept as spy_data / spy_price for compatibility with
+        # benchmark.py and run_optimized_scan.py, which reference
+        # processor.spy_data / processor.spy_price. They now hold SET Index
+        # data instead of SPY data.
         self.spy_data = None
         self.spy_price = None
         self.progress_file = self.results_dir / "batch_progress.pkl"
@@ -151,33 +158,38 @@ class OptimizedBatchProcessor:
             self.last_request_time = time.time()
 
     def fetch_spy_data(self) -> bool:
-        """Fetch SPY benchmark data."""
+        """Fetch SET Index benchmark data.
+
+        Method name kept as fetch_spy_data for compatibility with
+        process_batch_parallel below, which calls self.fetch_spy_data().
+        It now fetches the Thai SET Index (^SET.BK) instead of SPY.
+        """
         try:
-            logger.info("Fetching SPY data...")
+            logger.info(f"Fetching {BENCHMARK_TICKER} (SET Index) data...")
             # Use 1 year for price data (not 2 years - 50% less data)
             # Use same fetcher as stocks for consistency
             if self.use_git_storage and self.git_fetcher:
-                spy_hist = self.git_fetcher.fetch_price_fresh('SPY')
+                spy_hist = self.git_fetcher.fetch_price_fresh(BENCHMARK_TICKER)
             else:
-                spy_hist = self.fetcher.fetch_price_history('SPY', period='1y')
+                spy_hist = self.fetcher.fetch_price_history(BENCHMARK_TICKER, period='1y')
 
             if spy_hist.empty:
-                logger.error("Failed to fetch SPY data")
+                logger.error(f"Failed to fetch {BENCHMARK_TICKER} data")
                 return False
 
             # Ensure DatetimeIndex (yfinance should return this, but verify)
             if not isinstance(spy_hist.index, pd.DatetimeIndex):
-                logger.error(f"SPY has invalid index type: {type(spy_hist.index)}")
-                logger.error(f"SPY index: {spy_hist.index}")
+                logger.error(f"{BENCHMARK_TICKER} has invalid index type: {type(spy_hist.index)}")
+                logger.error(f"{BENCHMARK_TICKER} index: {spy_hist.index}")
                 return False
 
             self.spy_data = spy_hist
             self.spy_price = spy_hist['Close'].iloc[-1]
-            logger.info(f"SPY ready: {len(spy_hist)} days, ${self.spy_price:.2f}")
+            logger.info(f"{BENCHMARK_TICKER} ready: {len(spy_hist)} days, ฿{self.spy_price:.2f}")
             return True
 
         except Exception as e:
-            logger.error(f"Error fetching SPY: {e}")
+            logger.error(f"Error fetching {BENCHMARK_TICKER}: {e}")
             return False
 
     def analyze_single_stock(
@@ -275,7 +287,7 @@ class OptimizedBatchProcessor:
                 self.filter_reasons['invalid_phase'] = self.filter_reasons.get('invalid_phase', 0) + 1
                 return None
 
-            # RS calculation
+            # RS calculation (relative to SET Index)
             rs_series = calculate_relative_strength(
                 price_data['Close'],
                 self.spy_data['Close'],
@@ -380,9 +392,9 @@ class OptimizedBatchProcessor:
         logger.info(f"Est. time: {len(tickers) * self.rate_limit_delay / self.max_workers / 3600:.1f} hours")
         logger.info("="*60)
 
-        # Fetch SPY
+        # Fetch SET Index benchmark
         if not self.fetch_spy_data():
-            return {'error': 'Failed to fetch SPY'}
+            return {'error': f'Failed to fetch {BENCHMARK_TICKER}'}
 
         # Load progress
         if resume:
