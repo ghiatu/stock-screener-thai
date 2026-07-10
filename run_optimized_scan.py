@@ -49,7 +49,7 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
 
     output = []
     output.append("="*80)
-    output.append("OPTIMIZED FULL MARKET SCAN - ALL US STOCKS")
+    output.append("OPTIMIZED FULL MARKET SCAN - SET50 THAI STOCKS")
     output.append(f"Scan Date: {date_str}")
     output.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     output.append("="*80)
@@ -123,7 +123,7 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
 
             # CRITICAL: Stop loss and R/R ratio
             if signal.get('stop_loss'):
-                output.append(f"Stop Loss: ${signal['stop_loss']:.2f}")
+                output.append(f"Stop Loss: ฿{signal['stop_loss']:.2f}")
                 details = signal.get('details', {})
                 risk_amt = details.get('risk_amount', 0)
                 reward_amt = details.get('reward_amount', 0)
@@ -135,10 +135,10 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
                     rr_emoji = "🟢"  # Good R/R
                 else:
                     rr_emoji = "🟡"  # Poor R/R
-                output.append(f"{rr_emoji} Risk/Reward: {rr_ratio:.1f}:1 (Risk ${risk_amt:.2f}, Reward ${reward_amt:.2f})")
+                output.append(f"{rr_emoji} Risk/Reward: {rr_ratio:.1f}:1 (Risk ฿{risk_amt:.2f}, Reward ฿{reward_amt:.2f})")
 
             if signal.get('breakout_price'):
-                output.append(f"Breakout: ${signal['breakout_price']:.2f}")
+                output.append(f"Breakout: ฿{signal['breakout_price']:.2f}")
 
             details = signal.get('details', {})
             if 'rs_slope' in details:
@@ -230,7 +230,7 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
             output.append(f"{'#'*80}")
             output.append(f"Phase: {signal['phase']} | {severity_emoji} Severity: {severity.upper()}")
             if signal.get('breakdown_level'):
-                output.append(f"Breakdown: ${signal['breakdown_level']:.2f}")
+                output.append(f"Breakdown: ฿{signal['breakdown_level']:.2f}")
             details = signal.get('details', {})
             if 'rs_slope' in details:
                 rs_slope = details['rs_slope']
