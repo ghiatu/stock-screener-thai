@@ -1,6 +1,7 @@
 """Benchmark and market breadth analysis module.
 
-This module analyzes SPY (market benchmark) and calculates market breadth metrics.
+This module analyzes the SET Index (Thailand market benchmark, ticker ^SET.BK
+on yfinance) and calculates market breadth metrics.
 """
 
 import logging
@@ -16,19 +17,27 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Thailand SET Index ticker on yfinance
+BENCHMARK_TICKER = "^SET.BK"
+CURRENCY_SYMBOL = "฿"
 
-def analyze_spy_trend(spy_price_data: pd.DataFrame, current_spy_price: float) -> Dict[str, any]:
-    """Analyze SPY trend using Phase classification.
+
+def analyze_spy_trend(benchmark_price_data: pd.DataFrame, current_benchmark_price: float) -> Dict[str, any]:
+    """Analyze SET Index trend using Phase classification.
+
+    Function name kept as analyze_spy_trend so the rest of the codebase
+    (fetcher.py, run_optimized_scan.py, etc.) does not need to change its
+    imports. Internally it now analyzes the SET Index instead of SPY.
 
     Args:
-        spy_price_data: SPY OHLCV data
-        current_spy_price: Current SPY price
+        benchmark_price_data: SET Index OHLCV data
+        current_benchmark_price: Current SET Index price
 
     Returns:
-        Dict with SPY trend analysis
+        Dict with SET Index trend analysis
     """
-    if spy_price_data.empty:
-        logger.warning("Empty SPY price data")
+    if benchmark_price_data.empty:
+        logger.warning("Empty SET Index price data")
         return {
             'phase': 0,
             'phase_name': 'Unknown',
@@ -36,8 +45,8 @@ def analyze_spy_trend(spy_price_data: pd.DataFrame, current_spy_price: float) ->
             'error': 'No data'
         }
 
-    # Classify SPY phase
-    phase_info = classify_phase(spy_price_data, current_spy_price)
+    # Classify SET Index phase
+    phase_info = classify_phase(benchmark_price_data, current_benchmark_price)
 
     # Determine overall trend
     phase = phase_info['phase']
@@ -53,7 +62,7 @@ def analyze_spy_trend(spy_price_data: pd.DataFrame, current_spy_price: float) ->
         trend = 'Unknown'
 
     return {
-        'ticker': 'SPY',
+        'ticker': BENCHMARK_TICKER,
         'phase': phase,
         'phase_name': phase_info['phase_name'],
         'trend': trend,
@@ -62,7 +71,7 @@ def analyze_spy_trend(spy_price_data: pd.DataFrame, current_spy_price: float) ->
         'sma_200': phase_info.get('sma_200'),
         'slope_50': phase_info.get('slope_50'),
         'slope_200': phase_info.get('slope_200'),
-        'current_price': current_spy_price,
+        'current_price': current_benchmark_price,
         'reasons': phase_info.get('reasons', [])
     }
 
@@ -133,29 +142,29 @@ def classify_market_regime(spy_analysis: Dict, breadth: Dict) -> str:
     """Classify overall market regime (Risk-On vs Risk-Off).
 
     Args:
-        spy_analysis: SPY trend analysis
+        spy_analysis: SET Index trend analysis (param name kept for compatibility)
         breadth: Market breadth metrics
 
     Returns:
         Market regime classification
     """
-    spy_phase = spy_analysis.get('phase', 0)
+    benchmark_phase = spy_analysis.get('phase', 0)
     phase_2_pct = breadth.get('phase_2_pct', 0)
 
     # Strong Risk-On conditions
-    if spy_phase == 2 and phase_2_pct > 40:
+    if benchmark_phase == 2 and phase_2_pct > 40:
         return 'RISK-ON (Strong)'
 
     # Moderate Risk-On
-    elif spy_phase == 2 and phase_2_pct > 25:
+    elif benchmark_phase == 2 and phase_2_pct > 25:
         return 'RISK-ON (Moderate)'
 
     # Weak Risk-On / Mixed
-    elif spy_phase == 2 or (spy_phase == 1 and phase_2_pct > 30):
+    elif benchmark_phase == 2 or (benchmark_phase == 1 and phase_2_pct > 30):
         return 'RISK-ON (Weak) / Mixed'
 
     # Risk-Off conditions
-    elif spy_phase == 4 or phase_2_pct < 15:
+    elif benchmark_phase == 4 or phase_2_pct < 15:
         return 'RISK-OFF'
 
     # Transitional / Uncertain
@@ -167,7 +176,7 @@ def format_benchmark_summary(spy_analysis: Dict, breadth: Dict) -> str:
     """Format benchmark summary for output.
 
     Args:
-        spy_analysis: SPY analysis dict
+        spy_analysis: SET Index analysis dict (param name kept for compatibility)
         breadth: Market breadth dict
 
     Returns:
@@ -176,10 +185,10 @@ def format_benchmark_summary(spy_analysis: Dict, breadth: Dict) -> str:
     regime = classify_market_regime(spy_analysis, breadth)
 
     summary = f"\n{'='*60}\n"
-    summary += "BENCHMARK SUMMARY\n"
+    summary += "BENCHMARK SUMMARY (SET Index)\n"
     summary += f"{'='*60}\n\n"
 
-    # SPY Analysis with emoji
+    # SET Index Analysis with emoji
     phase = spy_analysis['phase']
     if phase == 2:
         phase_emoji = "🟢"  # Uptrend
@@ -190,18 +199,18 @@ def format_benchmark_summary(spy_analysis: Dict, breadth: Dict) -> str:
     else:
         phase_emoji = "🔴"  # Downtrend
 
-    summary += f"{phase_emoji} SPY Trend Classification:\n"
+    summary += f"{phase_emoji} {spy_analysis.get('ticker', BENCHMARK_TICKER)} Trend Classification:\n"
     summary += f"  Phase: {spy_analysis['phase']} - {spy_analysis['phase_name']}\n"
     summary += f"  Trend: {spy_analysis['trend']}\n"
-    summary += f"  Current Price: ${spy_analysis.get('current_price', 0):.2f}\n"
+    summary += f"  Current Price: {CURRENCY_SYMBOL}{spy_analysis.get('current_price', 0):.2f}\n"
 
     slope_50 = spy_analysis.get('slope_50', 0)
     slope_50_emoji = "🟢" if slope_50 > 0 else "🔴"
-    summary += f"  {slope_50_emoji} 50 SMA: ${spy_analysis.get('sma_50', 0):.2f} (slope: {slope_50:.4f})\n"
+    summary += f"  {slope_50_emoji} 50 SMA: {CURRENCY_SYMBOL}{spy_analysis.get('sma_50', 0):.2f} (slope: {slope_50:.4f})\n"
 
     slope_200 = spy_analysis.get('slope_200', 0)
     slope_200_emoji = "🟢" if slope_200 > 0 else "🔴"
-    summary += f"  {slope_200_emoji} 200 SMA: ${spy_analysis.get('sma_200', 0):.2f} (slope: {slope_200:.4f})\n"
+    summary += f"  {slope_200_emoji} 200 SMA: {CURRENCY_SYMBOL}{spy_analysis.get('sma_200', 0):.2f} (slope: {slope_200:.4f})\n"
 
     confidence = spy_analysis.get('confidence', 0)
     if confidence >= 80:
@@ -220,12 +229,15 @@ def format_benchmark_summary(spy_analysis: Dict, breadth: Dict) -> str:
     summary += f"  🔴 Phase 4 (Downtrend): {breadth['phase_4_count']} stocks ({breadth['phase_4_pct']:.1f}%)\n"
 
     # Breadth quality emoji
+    # NOTE: fixed to match actual casing returned by calculate_market_breadth
+    # ('Excellent', 'Good', 'Fair', 'Weak') - previously compared lowercase
+    # and this emoji never matched.
     breadth_quality = breadth['breadth_quality']
-    if breadth_quality == 'excellent':
+    if breadth_quality == 'Excellent':
         breadth_emoji = "⭐"  # Star for excellent
-    elif breadth_quality == 'good':
+    elif breadth_quality == 'Good':
         breadth_emoji = "🟢"
-    elif breadth_quality == 'moderate':
+    elif breadth_quality == 'Fair':
         breadth_emoji = "🟡"
     else:
         breadth_emoji = "🔴"
@@ -262,14 +274,14 @@ def should_generate_signals(spy_analysis: Dict, breadth: Dict,
     """Determine if market conditions warrant generating buy signals.
 
     Args:
-        spy_analysis: SPY analysis
+        spy_analysis: SET Index analysis (param name kept for compatibility)
         breadth: Market breadth
         min_phase2_pct: Minimum Phase 2 percentage for signal generation
 
     Returns:
         Dict with recommendation
     """
-    spy_phase = spy_analysis.get('phase', 0)
+    benchmark_phase = spy_analysis.get('phase', 0)
     phase_2_pct = breadth.get('phase_2_pct', 0)
     regime = classify_market_regime(spy_analysis, breadth)
 
@@ -277,14 +289,14 @@ def should_generate_signals(spy_analysis: Dict, breadth: Dict,
     should_buy = False
     reasons = []
 
-    if spy_phase in [2, 1]:
+    if benchmark_phase in [2, 1]:
         if phase_2_pct >= min_phase2_pct:
             should_buy = True
             reasons.append(f"Market breadth adequate ({phase_2_pct:.1f}% in Phase 2)")
         else:
             reasons.append(f"Market breadth weak ({phase_2_pct:.1f}% in Phase 2, need {min_phase2_pct}%)")
     else:
-        reasons.append(f"SPY in unfavorable phase ({spy_phase})")
+        reasons.append(f"SET Index in unfavorable phase ({benchmark_phase})")
 
     # Sell signals - always generate if applicable
     should_sell = True
@@ -295,5 +307,5 @@ def should_generate_signals(spy_analysis: Dict, breadth: Dict,
         'regime': regime,
         'reasons': reasons,
         'phase_2_pct': phase_2_pct,
-        'spy_phase': spy_phase
+        'spy_phase': benchmark_phase
     }
