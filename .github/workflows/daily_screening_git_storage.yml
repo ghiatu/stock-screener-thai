@@ -176,3 +176,10 @@ jobs:
               echo "  No changes committed"
             fi
           fi
+      - name: Send Report to Telegram
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: "สแกนหุ้นเสร็จแล้ว! เข้าไปดูรายงานได้ที่หน้าระบบครับ"
+          document: ./report.txt
