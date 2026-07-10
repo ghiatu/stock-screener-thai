@@ -1,17 +1,18 @@
-"""Fetch and maintain the universe of all publicly traded US stocks.
+"""Fetch and maintain the universe of Thai SET-listed stocks.
 
-This module fetches the complete list of US-listed stocks from multiple sources
-and maintains a daily-updated universe for screening.
+This module maintains a curated universe of SET50 (Stock Exchange of Thailand)
+stocks for screening. Since Thailand's exchange does not offer a free public
+FTP feed like NASDAQ, the universe is maintained as a curated list that you
+update manually twice a year when SET revises SET50 (each January and July).
 """
 
 import logging
 import pickle
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Dict, List, Set
+from typing import Dict, List
 
 import pandas as pd
-import requests
 
 logging.basicConfig(
     level=logging.INFO,
@@ -20,8 +21,76 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+# Curated SET50 constituent list (base symbols, without .BK suffix).
+# Source: SET official constituents list / Wikipedia, as of 2025-2026 revision.
+# NOTE: SET revises SET50 twice a year (effective Jan 1 and Jul 1).
+# Update this list from https://www.set.or.th/en/market/index/set50/overview
+# when a new revision is announced.
+SET50_SYMBOLS: Dict[str, str] = {
+    "ADVANC": "Advanced Info Service",
+    "AOT": "Airports of Thailand",
+    "AWC": "Asset World Corp",
+    "BANPU": "Banpu",
+    "BBL": "Bangkok Bank",
+    "BCP": "Bangchak Corporation",
+    "BDMS": "Bangkok Dusit Medical Service",
+    "BEM": "Bangkok Expressway and Metro",
+    "BH": "Bumrungrad International Hospital",
+    "BJC": "Berli Jucker",
+    "BTS": "BTS Group Holdings",
+    "CBG": "Carabao Group",
+    "CCET": "Cal-Comp Electronics (Thailand)",
+    "COM7": "Com Seven",
+    "CPALL": "CP All",
+    "CPF": "Charoen Pokphand Foods",
+    "CPN": "Central Pattana",
+    "CRC": "Central Retail Corporation",
+    "DELTA": "Delta Electronics (Thailand)",
+    "EGCO": "Electricity Generating",
+    "GPSC": "Global Power Synergy",
+    "GULF": "Gulf Development",
+    "HMPRO": "Home Product Center",
+    "IVL": "Indorama Ventures",
+    "KBANK": "Kasikornbank",
+    "KCE": "KCE Electronics",
+    "KKP": "Kiatnakin Phatra Bank",
+    "KTB": "Krungthai Bank",
+    "KTC": "Krungthai Card",
+    "LH": "Land and Houses",
+    "MINT": "Minor International",
+    "MTC": "Muangthai Capital",
+    "OR": "PTT Oil and Retail Business",
+    "OSP": "Osotspa",
+    "PTT": "PTT",
+    "PTTEP": "PTT Exploration and Production",
+    "PTTGC": "PTT Global Chemical",
+    "RATCH": "Ratch Group",
+    "SCB": "Siam Commercial Bank",
+    "SCC": "Siam Cement Group",
+    "SCGP": "SCG Packaging",
+    "TCAP": "Thanachart Capital",
+    "TIDLOR": "Tidlor Holdings",
+    "TISCO": "Tisco Financial Group",
+    "TLI": "Thai Life Insurance",
+    "TOP": "Thai Oil",
+    "TRUE": "TRUE Corporation",
+    "TTB": "TMBThanachart Bank",
+    "TU": "Thai Union Group",
+    "VGI": "VGI",
+    "WHA": "WHA Corporation",
+}
+
+# yfinance requires this suffix for SET-listed tickers
+SET_SUFFIX = ".BK"
+
+
 class USStockUniverseFetcher:
-    """Fetches and maintains the universe of all US-listed stocks."""
+    """Fetches and maintains the universe of SET50-listed Thai stocks.
+
+    Class name kept as USStockUniverseFetcher so the rest of the codebase
+    (fetcher.py, run_optimized_scan.py, etc.) does not need to change its
+    imports. Internally it now returns Thai SET tickers instead of US ones.
+    """
 
     def __init__(self, cache_dir: str = "./data/cache"):
         """Initialize the universe fetcher.
@@ -31,111 +100,31 @@ class USStockUniverseFetcher:
         """
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
-        self.cache_file = self.cache_dir / "us_stock_universe.pkl"
-        logger.info("USStockUniverseFetcher initialized")
+        self.cache_file = self.cache_dir / "thai_stock_universe.pkl"
+        logger.info("USStockUniverseFetcher initialized (Thai SET50 mode)")
 
-    def _fetch_from_fmp(self) -> List[Dict]:
-        """Fetch stock list from Financial Modeling Prep (free tier).
-
-        Note: This requires a free API key from financialmodelingprep.com
-        Falls back to other sources if not available.
-        """
-        # This is a fallback - will use other sources
-        return []
-
-    def _fetch_nasdaq_listed(self) -> pd.DataFrame:
-        """Fetch NASDAQ-listed stocks from NASDAQ FTP.
+    def _build_set50_dataframe(self) -> pd.DataFrame:
+        """Build a DataFrame of SET50 stocks with .BK suffix applied.
 
         Returns:
-            DataFrame with NASDAQ stocks
+            DataFrame with columns ['symbol', 'name']
         """
-        try:
-            url = "ftp://ftp.nasdaqtrader.com/symboldirectory/nasdaqlisted.txt"
-            df = pd.read_csv(url, sep='|')
-            df = df[df['Symbol'].notna()]
-            df = df[df['Test Issue'] == 'N']  # Exclude test issues
-            df = df[['Symbol', 'Security Name']].copy()
-            df.columns = ['symbol', 'name']
-            logger.info(f"Fetched {len(df)} NASDAQ stocks")
-            return df
-        except Exception as e:
-            logger.error(f"Error fetching NASDAQ stocks: {e}")
-            return pd.DataFrame()
-
-    def _fetch_other_listed(self) -> pd.DataFrame:
-        """Fetch non-NASDAQ listed stocks (NYSE, AMEX, etc).
-
-        Returns:
-            DataFrame with other exchange stocks
-        """
-        try:
-            url = "ftp://ftp.nasdaqtrader.com/symboldirectory/otherlisted.txt"
-            df = pd.read_csv(url, sep='|')
-            df = df[df['ACT Symbol'].notna()]
-            df = df[df['Test Issue'] == 'N']  # Exclude test issues
-            df = df[['ACT Symbol', 'Security Name']].copy()
-            df.columns = ['symbol', 'name']
-            logger.info(f"Fetched {len(df)} NYSE/AMEX stocks")
-            return df
-        except Exception as e:
-            logger.error(f"Error fetching NYSE/AMEX stocks: {e}")
-            return pd.DataFrame()
-
-    def _filter_stocks(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Filter out unwanted tickers.
-
-        Removes:
-        - Tickers with special characters ($, ^, ., etc.)
-        - Test symbols
-        - Warrants, rights, units
-        - Preferred shares
-        - ETFs and funds (heuristic)
-
-        Args:
-            df: DataFrame with symbols
-
-        Returns:
-            Filtered DataFrame
-        """
-        if df.empty:
-            return df
-
-        initial_count = len(df)
-
-        # Remove symbols with special characters
-        df = df[~df['symbol'].str.contains(r'[\$\^\.\-]', regex=True, na=False)]
-
-        # Remove common suffixes for warrants, rights, units
-        suffixes = ['W', 'R', 'U', 'WS', 'WT']
-        for suffix in suffixes:
-            df = df[~df['symbol'].str.endswith(suffix, na=False)]
-
-        # Remove preferred shares (usually have letters after symbol)
-        # Keep only symbols that are 1-5 uppercase letters
-        df = df[df['symbol'].str.match(r'^[A-Z]{1,5}$', na=False)]
-
-        # Remove obvious ETFs and funds (heuristic based on name)
-        etf_keywords = [
-            'ETF', 'FUND', 'TRUST', 'INDEX', 'PORTFOLIO',
-            'SHARES', 'NOTES', 'BOND', 'TREASURY'
+        rows = [
+            {"symbol": f"{symbol}{SET_SUFFIX}", "name": name}
+            for symbol, name in SET50_SYMBOLS.items()
         ]
-        name_upper = df['name'].str.upper()
-        for keyword in etf_keywords:
-            df = df[~name_upper.str.contains(keyword, na=False)]
-
-        filtered_count = len(df)
-        logger.info(f"Filtered {initial_count - filtered_count} stocks, kept {filtered_count}")
-
+        df = pd.DataFrame(rows)
+        logger.info(f"Built SET50 universe with {len(df)} stocks")
         return df
 
     def fetch_universe(self, force_refresh: bool = False) -> List[str]:
-        """Fetch the complete universe of US-listed stocks.
+        """Fetch the universe of SET50-listed Thai stocks.
 
         Args:
             force_refresh: Force refresh even if cached data is recent
 
         Returns:
-            List of stock ticker symbols
+            List of stock ticker symbols (with .BK suffix)
         """
         # Check cache
         if not force_refresh and self.cache_file.exists():
@@ -150,26 +139,16 @@ class USStockUniverseFetcher:
                 logger.info(f"Loaded {len(cached_data['symbols'])} symbols from cache")
                 return cached_data['symbols']
 
-        logger.info("Fetching fresh universe from exchanges...")
+        logger.info("Building SET50 universe...")
 
-        # Fetch from multiple sources
-        nasdaq_df = self._fetch_nasdaq_listed()
-        other_df = self._fetch_other_listed()
-
-        # Combine
-        all_stocks = pd.concat([nasdaq_df, other_df], ignore_index=True)
+        all_stocks = self._build_set50_dataframe()
 
         if all_stocks.empty:
-            logger.error("Failed to fetch any stocks")
+            logger.error("Failed to build SET50 universe")
             return []
 
-        # Remove duplicates
+        # Remove duplicates, sort
         all_stocks = all_stocks.drop_duplicates(subset=['symbol'])
-
-        # Filter unwanted symbols
-        all_stocks = self._filter_stocks(all_stocks)
-
-        # Sort by symbol
         all_stocks = all_stocks.sort_values('symbol').reset_index(drop=True)
 
         symbols = all_stocks['symbol'].tolist()
@@ -180,8 +159,7 @@ class USStockUniverseFetcher:
             'fetch_date': datetime.now().isoformat(),
             'count': len(symbols),
             'metadata': {
-                'nasdaq_count': len(nasdaq_df),
-                'other_count': len(other_df),
+                'source': 'SET50 curated list',
                 'filtered_count': len(symbols)
             }
         }
