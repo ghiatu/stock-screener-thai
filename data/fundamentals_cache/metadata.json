@@ -10558,5 +10558,21 @@
   "MST.BK": {
     "last_updated": "2026-07-14T11:31:30.119349",
     "in_earnings_season": false
+  },
+  "GUNKUL.BK": {
+    "last_updated": "2026-07-15T11:31:27.663448",
+    "in_earnings_season": true
+  },
+  "NTSC.BK": {
+    "last_updated": "2026-07-15T11:34:43.701230",
+    "in_earnings_season": true
+  },
+  "TMAN.BK": {
+    "last_updated": "2026-07-15T11:39:39.716422",
+    "in_earnings_season": true
+  },
+  "TTA.BK": {
+    "last_updated": "2026-07-15T11:40:25.778674",
+    "in_earnings_season": true
   }
 }
