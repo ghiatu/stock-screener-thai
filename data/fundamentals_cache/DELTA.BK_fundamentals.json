@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "DELTA.BK",
-    "fetch_date": "2026-07-10T11:14:53.667986",
+    "fetch_date": "2026-07-17T11:23:04.203345",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": 41746710495.0,
       "2025-03-31 00:00:00": 42750212000.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.695,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T11:14:53.671045"
+  "fetched_at": "2026-07-17T11:23:04.204885"
 }

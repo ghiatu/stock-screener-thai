@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TLI.BK",
-    "fetch_date": "2026-07-10T11:15:19.473347",
+    "fetch_date": "2026-07-17T11:32:22.030999",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 13296080000.0,
@@ -24,5 +24,5 @@
     "eps_yoy_change": 26.08695652173912,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T11:15:19.474034"
+  "fetched_at": "2026-07-17T11:32:22.031666"
 }

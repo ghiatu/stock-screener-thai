@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ADVANC.BK",
-    "fetch_date": "2026-07-10T11:14:35.669588",
+    "fetch_date": "2026-07-17T11:19:55.056598",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": 56735523968.0,
       "2025-03-31 00:00:00": 56310847000.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.067,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T11:14:35.671776"
+  "fetched_at": "2026-07-17T11:19:55.058263"
 }

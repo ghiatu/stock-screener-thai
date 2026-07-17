@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "HMPRO.BK",
-    "fetch_date": "2026-07-10T11:14:57.540216",
+    "fetch_date": "2026-07-17T11:24:26.116869",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": 17438299163.0,
       "2025-03-31 00:00:00": 18018730000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.944,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T11:14:57.542007"
+  "fetched_at": "2026-07-17T11:24:26.118395"
 }

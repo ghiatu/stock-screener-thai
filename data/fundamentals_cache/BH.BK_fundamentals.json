@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BH.BK",
-    "fetch_date": "2026-07-10T11:14:43.483718",
+    "fetch_date": "2026-07-17T11:21:25.127727",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 6140958000.0,
       "2025-06-30 00:00:00": 6024062000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.052,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T11:14:43.485540"
+  "fetched_at": "2026-07-17T11:21:25.129336"
 }

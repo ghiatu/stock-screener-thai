@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "AOT.BK",
-    "fetch_date": "2026-07-10T11:14:36.621222",
+    "fetch_date": "2026-07-17T11:20:30.106674",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 17905877678.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.029,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T11:14:36.623067"
+  "fetched_at": "2026-07-17T11:20:30.108270"
 }

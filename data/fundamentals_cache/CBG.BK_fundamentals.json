@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "CBG.BK",
-    "fetch_date": "2026-07-10T11:14:46.557048",
+    "fetch_date": "2026-07-17T11:22:01.096126",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 5328163000.0,
       "2025-06-30 00:00:00": 5577046000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.383,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T11:14:46.558890"
+  "fetched_at": "2026-07-17T11:22:01.097631"
 }

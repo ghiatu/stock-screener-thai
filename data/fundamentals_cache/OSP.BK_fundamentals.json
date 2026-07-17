@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "OSP.BK",
-    "fetch_date": "2026-07-10T11:15:08.514650",
+    "fetch_date": "2026-07-17T11:27:44.449461",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 6831385000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.3,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T11:15:08.516506"
+  "fetched_at": "2026-07-17T11:27:44.451703"
 }
