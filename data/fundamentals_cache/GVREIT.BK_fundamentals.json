@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "GVREIT.BK",
-    "fetch_date": "2026-07-10T12:08:37.750629",
+    "fetch_date": "2026-07-20T12:20:10.932353",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 280420000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 71.23,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:08:37.751800"
+  "fetched_at": "2026-07-20T12:20:10.933721"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "STA.BK",
-    "fetch_date": "2026-07-10T12:15:30.962619",
+    "fetch_date": "2026-07-20T12:28:02.262684",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 34385089739.0,
       "2025-06-30 00:00:00": 30841407595.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 1.142,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:15:30.964129"
+  "fetched_at": "2026-07-20T12:28:02.264378"
 }

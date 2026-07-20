@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BAM.BK",
-    "fetch_date": "2026-07-10T12:05:22.380421",
+    "fetch_date": "2026-07-20T12:16:12.754807",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 2568032000.0,
       "2025-06-30 00:00:00": 2259866000.0,
@@ -25,5 +25,5 @@
     "operating_margin": 26.28,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:05:22.381604"
+  "fetched_at": "2026-07-20T12:16:12.756166"
 }

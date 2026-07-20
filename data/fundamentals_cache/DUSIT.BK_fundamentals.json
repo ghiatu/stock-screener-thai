@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "DUSIT.BK",
-    "fetch_date": "2026-07-10T12:07:37.052919",
+    "fetch_date": "2026-07-20T12:18:51.124976",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 2110759000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 3.058,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:07:37.054438"
+  "fetched_at": "2026-07-20T12:18:51.126763"
 }

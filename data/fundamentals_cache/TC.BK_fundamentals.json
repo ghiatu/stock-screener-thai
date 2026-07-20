@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TC.BK",
-    "fetch_date": "2026-07-10T12:16:04.786943",
+    "fetch_date": "2026-07-20T12:28:35.993716",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 1536493000.0,
       "2025-06-30 00:00:00": 1587815000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 1.134,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:16:04.788405"
+  "fetched_at": "2026-07-20T12:28:35.995445"
 }

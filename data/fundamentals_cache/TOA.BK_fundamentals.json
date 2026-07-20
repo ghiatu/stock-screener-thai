@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TOA.BK",
-    "fetch_date": "2026-07-10T12:17:02.218891",
+    "fetch_date": "2026-07-20T12:29:34.176742",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 5424715000.0,
       "2025-06-30 00:00:00": 5367224000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.523,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:17:02.220367"
+  "fetched_at": "2026-07-20T12:29:34.178516"
 }

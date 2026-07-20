@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "NEO.BK",
-    "fetch_date": "2026-07-10T12:11:36.644320",
+    "fetch_date": "2026-07-20T12:23:07.241139",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 2589338000.0,
       "2025-06-30 00:00:00": 2583702000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.472,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:11:36.645792"
+  "fetched_at": "2026-07-20T12:23:07.242891"
 }

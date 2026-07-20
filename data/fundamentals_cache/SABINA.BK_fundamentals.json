@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SABINA.BK",
-    "fetch_date": "2026-07-10T12:13:51.172447",
+    "fetch_date": "2026-07-20T12:25:46.053955",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 841606983.52,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.25,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:13:51.173919"
+  "fetched_at": "2026-07-20T12:25:46.055698"
 }

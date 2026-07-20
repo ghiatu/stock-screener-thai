@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "WHABT.BK",
-    "fetch_date": "2026-07-10T12:18:35.103027",
+    "fetch_date": "2026-07-20T12:30:58.443898",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 48191657.0,
@@ -27,5 +27,5 @@
     "operating_margin": 86.77,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:18:35.104216"
+  "fetched_at": "2026-07-20T12:30:58.445209"
 }

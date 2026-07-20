@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "IMPACT.BK",
-    "fetch_date": "2026-07-10T12:09:04.732966",
+    "fetch_date": "2026-07-20T12:20:37.052581",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": 572001000.0,
       "2025-03-31 00:00:00": 486515170.0,
@@ -25,5 +25,5 @@
     "operating_margin": 63.95,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:09:04.734118"
+  "fetched_at": "2026-07-20T12:20:37.053903"
 }

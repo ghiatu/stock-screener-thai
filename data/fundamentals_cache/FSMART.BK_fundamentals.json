@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "FSMART.BK",
-    "fetch_date": "2026-07-10T12:08:07.834663",
+    "fetch_date": "2026-07-20T12:19:21.144321",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 566175000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.135,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:08:07.836239"
+  "fetched_at": "2026-07-20T12:19:21.146089"
 }

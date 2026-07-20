@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SPRC.BK",
-    "fetch_date": "2026-07-10T12:15:15.884646",
+    "fetch_date": "2026-07-20T12:27:46.784512",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 64069883055.0,
       "2025-06-30 00:00:00": 58354727483.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.521,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:15:15.887320"
+  "fetched_at": "2026-07-20T12:27:46.786228"
 }

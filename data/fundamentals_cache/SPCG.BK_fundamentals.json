@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SPCG.BK",
-    "fetch_date": "2026-07-10T12:15:14.144260",
+    "fetch_date": "2026-07-20T12:27:43.843406",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 534422969.0,
       "2025-06-30 00:00:00": 388507337.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.812,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:15:14.146465"
+  "fetched_at": "2026-07-20T12:27:43.845170"
 }

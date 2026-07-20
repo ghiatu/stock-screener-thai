@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "CENTEL.BK",
-    "fetch_date": "2026-07-10T12:06:24.081497",
+    "fetch_date": "2026-07-20T12:17:37.962537",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 6422669000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.121,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:06:24.083086"
+  "fetched_at": "2026-07-20T12:17:37.964299"
 }

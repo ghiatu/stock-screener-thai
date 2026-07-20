@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SISB.BK",
-    "fetch_date": "2026-07-10T12:14:44.947088",
+    "fetch_date": "2026-07-20T12:27:15.738211",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 624270000.0,
       "2025-06-30 00:00:00": 610985000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.021,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:14:44.948805"
+  "fetched_at": "2026-07-20T12:27:15.740760"
 }

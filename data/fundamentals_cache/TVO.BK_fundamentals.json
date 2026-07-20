@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TVO.BK",
-    "fetch_date": "2026-07-10T12:17:45.489292",
+    "fetch_date": "2026-07-20T12:30:16.276918",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 6855516000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.895,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:17:45.490810"
+  "fetched_at": "2026-07-20T12:30:16.278648"
 }

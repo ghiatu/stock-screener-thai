@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BBIK.BK",
-    "fetch_date": "2026-07-10T12:05:27.416553",
+    "fetch_date": "2026-07-20T12:16:17.878251",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 346661884.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.053,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:05:27.418062"
+  "fetched_at": "2026-07-20T12:16:17.880030"
 }
