@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "RBF.BK",
-    "fetch_date": "2026-07-10T12:13:30.050968",
+    "fetch_date": "2026-07-21T11:54:37.572109",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 1050267595.0,
       "2025-06-30 00:00:00": 1063571584.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 1.015,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:13:30.052679"
+  "fetched_at": "2026-07-21T11:54:37.573924"
 }

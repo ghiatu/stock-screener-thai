@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SAMART.BK",
-    "fetch_date": "2026-07-10T12:13:57.148137",
+    "fetch_date": "2026-07-21T11:55:03.668610",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 2869626000.0,
       "2025-06-30 00:00:00": 2362946000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.294,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-10T12:13:57.149613"
+  "fetched_at": "2026-07-21T11:55:03.670415"
 }

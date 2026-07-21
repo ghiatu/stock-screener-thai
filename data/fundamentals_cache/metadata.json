@@ -10052,8 +10052,8 @@
     "in_earnings_season": true
   },
   "BTG.BK": {
-    "last_updated": "2026-07-10T12:06:10.917510",
-    "in_earnings_season": false
+    "last_updated": "2026-07-21T11:47:23.495318",
+    "in_earnings_season": true
   },
   "CENTEL.BK": {
     "last_updated": "2026-07-20T12:17:37.965934",
@@ -10088,8 +10088,8 @@
     "in_earnings_season": true
   },
   "DRT.BK": {
-    "last_updated": "2026-07-10T12:07:34.863597",
-    "in_earnings_season": false
+    "last_updated": "2026-07-21T11:48:46.722020",
+    "in_earnings_season": true
   },
   "DUSIT.BK": {
     "last_updated": "2026-07-20T12:18:51.128545",
@@ -10308,8 +10308,8 @@
     "in_earnings_season": true
   },
   "RBF.BK": {
-    "last_updated": "2026-07-10T12:13:30.054539",
-    "in_earnings_season": false
+    "last_updated": "2026-07-21T11:54:37.575807",
+    "in_earnings_season": true
   },
   "RCL.BK": {
     "last_updated": "2026-07-20T12:25:26.059220",
@@ -10332,8 +10332,8 @@
     "in_earnings_season": true
   },
   "SAMART.BK": {
-    "last_updated": "2026-07-10T12:13:57.151294",
-    "in_earnings_season": false
+    "last_updated": "2026-07-21T11:55:03.672365",
+    "in_earnings_season": true
   },
   "SAPPE.BK": {
     "last_updated": "2026-07-20T12:26:24.782879",
@@ -10344,8 +10344,8 @@
     "in_earnings_season": true
   },
   "SAV.BK": {
-    "last_updated": "2026-07-10T12:14:03.602482",
-    "in_earnings_season": false
+    "last_updated": "2026-07-21T11:55:10.416454",
+    "in_earnings_season": true
   },
   "SAWAD.BK": {
     "last_updated": "2026-07-20T12:26:55.459046",
@@ -10552,12 +10552,12 @@
     "in_earnings_season": true
   },
   "KJL.BK": {
-    "last_updated": "2026-07-13T12:35:57.757853",
-    "in_earnings_season": false
+    "last_updated": "2026-07-21T11:51:06.546859",
+    "in_earnings_season": true
   },
   "MST.BK": {
-    "last_updated": "2026-07-14T11:31:30.119349",
-    "in_earnings_season": false
+    "last_updated": "2026-07-21T11:52:30.480648",
+    "in_earnings_season": true
   },
   "GUNKUL.BK": {
     "last_updated": "2026-07-15T11:31:27.663448",
@@ -10605,6 +10605,14 @@
   },
   "TMW.BK": {
     "last_updated": "2026-07-20T12:29:26.237521",
+    "in_earnings_season": true
+  },
+  "BBGI.BK": {
+    "last_updated": "2026-07-21T11:46:39.444187",
+    "in_earnings_season": true
+  },
+  "CPAXT.BK": {
+    "last_updated": "2026-07-21T11:48:10.388542",
     "in_earnings_season": true
   }
 }
