@@ -10560,19 +10560,19 @@
     "in_earnings_season": true
   },
   "GUNKUL.BK": {
-    "last_updated": "2026-07-15T11:31:27.663448",
+    "last_updated": "2026-07-22T11:50:25.679696",
     "in_earnings_season": true
   },
   "NTSC.BK": {
-    "last_updated": "2026-07-15T11:34:43.701230",
+    "last_updated": "2026-07-22T11:53:37.683741",
     "in_earnings_season": true
   },
   "TMAN.BK": {
-    "last_updated": "2026-07-15T11:39:39.716422",
+    "last_updated": "2026-07-22T11:58:32.593287",
     "in_earnings_season": true
   },
   "TTA.BK": {
-    "last_updated": "2026-07-15T11:40:25.778674",
+    "last_updated": "2026-07-22T11:59:17.794791",
     "in_earnings_season": true
   },
   "GC.BK": {
@@ -10613,6 +10613,14 @@
   },
   "CPAXT.BK": {
     "last_updated": "2026-07-21T11:48:10.388542",
+    "in_earnings_season": true
+  },
+  "SUC.BK": {
+    "last_updated": "2026-07-22T11:57:27.727268",
+    "in_earnings_season": true
+  },
+  "TPAC.BK": {
+    "last_updated": "2026-07-22T11:58:51.777126",
     "in_earnings_season": true
   }
 }
