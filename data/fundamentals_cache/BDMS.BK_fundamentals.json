@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BDMS.BK",
-    "fetch_date": "2026-07-17T11:21:16.325525",
+    "fetch_date": "2026-07-24T11:40:58.152168",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 28083927000.0,
       "2025-06-30 00:00:00": 26727423000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.112,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-17T11:21:16.327078"
+  "fetched_at": "2026-07-24T11:40:58.153070"
 }

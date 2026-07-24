@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TRUE.BK",
-    "fetch_date": "2026-07-17T11:33:03.185688",
+    "fetch_date": "2026-07-24T11:52:45.292955",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": 52742209000.0,
       "2025-03-31 00:00:00": 51435611000.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.038,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-17T11:33:03.187265"
+  "fetched_at": "2026-07-24T11:52:45.293842"
 }

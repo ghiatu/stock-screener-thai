@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SCB.BK",
-    "fetch_date": "2026-07-17T11:29:44.131706",
+    "fetch_date": "2026-07-24T11:49:26.059534",
     "quarterly_eps": {
       "2025-03-31 00:00:00": 3.71,
       "2025-06-30 00:00:00": 3.8,
@@ -11,5 +11,5 @@
     "eps_qoq_change": -15.363128491620119,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-17T11:29:44.132190"
+  "fetched_at": "2026-07-24T11:49:26.059764"
 }

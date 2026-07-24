@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SCGP.BK",
-    "fetch_date": "2026-07-17T11:29:48.971334",
+    "fetch_date": "2026-07-24T11:49:31.101699",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": 31231099000.0,
       "2025-03-31 00:00:00": 32208994000.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.598,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-17T11:29:48.972896"
+  "fetched_at": "2026-07-24T11:49:31.102588"
 }

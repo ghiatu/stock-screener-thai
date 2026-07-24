@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "GPSC.BK",
-    "fetch_date": "2026-07-17T11:24:09.086487",
+    "fetch_date": "2026-07-24T11:43:51.319461",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": 22167500274.0,
       "2025-03-31 00:00:00": 21413579405.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.414,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-17T11:24:09.088005"
+  "fetched_at": "2026-07-24T11:43:51.320367"
 }
