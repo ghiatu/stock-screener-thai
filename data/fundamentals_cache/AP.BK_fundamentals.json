@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "AP.BK",
-    "fetch_date": "2026-07-20T12:15:08.151416",
+    "fetch_date": "2026-07-27T12:54:37.066803",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 7698547000.0,
       "2025-06-30 00:00:00": 9938545000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 7.745,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:15:08.153175"
+  "fetched_at": "2026-07-27T12:54:37.068310"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ADVICE.BK",
-    "fetch_date": "2026-07-20T12:14:32.807847",
+    "fetch_date": "2026-07-27T12:54:01.891867",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 3989641000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.575,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:14:32.809701"
+  "fetched_at": "2026-07-27T12:54:01.893463"
 }

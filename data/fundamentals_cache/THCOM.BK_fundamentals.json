@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "THCOM.BK",
-    "fetch_date": "2026-07-20T12:28:58.808759",
+    "fetch_date": "2026-07-27T13:06:09.112061",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": 551651226.0,
       "2025-03-31 00:00:00": 499714000.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.026,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:28:58.810496"
+  "fetched_at": "2026-07-27T13:06:09.113554"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ILM.BK",
-    "fetch_date": "2026-07-20T12:20:35.184819",
+    "fetch_date": "2026-07-27T12:58:48.129920",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 2479777000.0,
       "2025-06-30 00:00:00": 2288769000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.752,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:20:35.186607"
+  "fetched_at": "2026-07-27T12:58:48.131539"
 }

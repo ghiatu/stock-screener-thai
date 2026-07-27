@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TFG.BK",
-    "fetch_date": "2026-07-20T12:28:47.882094",
+    "fetch_date": "2026-07-27T13:05:58.388374",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 17728501000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.726,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:28:47.884171"
+  "fetched_at": "2026-07-27T13:05:58.389926"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TNR.BK",
-    "fetch_date": "2026-07-20T12:29:33.117625",
+    "fetch_date": "2026-07-27T13:06:43.463204",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 434572000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.7,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:29:33.119380"
+  "fetched_at": "2026-07-27T13:06:43.465463"
 }

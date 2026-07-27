@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "KTBSTMR.BK",
-    "fetch_date": "2026-07-20T12:22:06.255142",
+    "fetch_date": "2026-07-27T12:59:48.872760",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 84040000.0,
       "2025-06-30 00:00:00": 85052000.0,
@@ -25,5 +25,5 @@
     "operating_margin": 74.65,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:22:06.256408"
+  "fetched_at": "2026-07-27T12:59:48.873927"
 }

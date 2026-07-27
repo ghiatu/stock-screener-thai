@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "GROREIT.BK",
-    "fetch_date": "2026-07-20T12:20:16.534909",
+    "fetch_date": "2026-07-27T12:58:18.892083",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 87310000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 94.5,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:20:16.536383"
+  "fetched_at": "2026-07-27T12:58:18.893293"
 }

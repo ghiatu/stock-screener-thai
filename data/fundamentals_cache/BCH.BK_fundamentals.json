@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BCH.BK",
-    "fetch_date": "2026-07-20T12:16:21.157091",
+    "fetch_date": "2026-07-27T12:55:19.029610",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 2922420000.0,
       "2025-06-30 00:00:00": 3039110000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.124,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:16:21.159725"
+  "fetched_at": "2026-07-27T12:55:19.031090"
 }

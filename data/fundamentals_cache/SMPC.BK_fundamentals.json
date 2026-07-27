@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SMPC.BK",
-    "fetch_date": "2026-07-20T12:27:29.799378",
+    "fetch_date": "2026-07-27T13:04:40.258600",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 1026512000.0,
       "2025-06-30 00:00:00": 1157878000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.701,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:27:29.801477"
+  "fetched_at": "2026-07-27T13:04:40.260110"
 }

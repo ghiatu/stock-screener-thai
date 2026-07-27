@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SRICHA.BK",
-    "fetch_date": "2026-07-20T12:27:53.837207",
+    "fetch_date": "2026-07-27T13:05:04.154919",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 189996014.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.036,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:27:53.838947"
+  "fetched_at": "2026-07-27T13:05:04.156415"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "CPNREIT.BK",
-    "fetch_date": "2026-07-20T12:18:18.061648",
+    "fetch_date": "2026-07-27T12:56:51.907943",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 1540467000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 75.35,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:18:18.063031"
+  "fetched_at": "2026-07-27T12:56:51.909126"
 }

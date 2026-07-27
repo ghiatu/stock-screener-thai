@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MAGURO.BK",
-    "fetch_date": "2026-07-20T12:22:38.596455",
+    "fetch_date": "2026-07-27T13:00:20.920729",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 414910400.0,
       "2025-06-30 00:00:00": 447473336.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.104,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-20T12:22:38.598204"
+  "fetched_at": "2026-07-27T13:00:20.922203"
 }
