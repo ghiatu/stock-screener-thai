@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "NETBAY.BK",
-    "fetch_date": "2026-07-23T11:56:39.726742",
+    "fetch_date": "2026-07-30T11:57:44.836504",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 180539000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 30.84,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-23T11:56:39.728140"
+  "fetched_at": "2026-07-30T11:57:44.837896"
 }
