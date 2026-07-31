@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "CPN.BK",
-    "fetch_date": "2026-07-24T11:42:26.093327",
+    "fetch_date": "2026-07-31T11:59:58.707844",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 11921254000.0,
       "2025-06-30 00:00:00": 11660633000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 1.466,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-24T11:42:26.094450"
+  "fetched_at": "2026-07-31T11:59:58.709582"
 }

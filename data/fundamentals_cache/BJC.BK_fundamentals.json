@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BJC.BK",
-    "fetch_date": "2026-07-24T11:41:12.064096",
+    "fetch_date": "2026-07-31T11:58:45.744536",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 38500062000.0,
       "2025-06-30 00:00:00": 38560980000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.565,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-24T11:41:12.065004"
+  "fetched_at": "2026-07-31T11:58:45.746364"
 }

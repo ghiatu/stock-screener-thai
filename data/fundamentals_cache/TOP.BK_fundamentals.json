@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TOP.BK",
-    "fetch_date": "2026-07-24T11:52:22.349203",
+    "fetch_date": "2026-07-31T12:09:53.768595",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 106269591000.0,
       "2025-06-30 00:00:00": 99086172000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.34,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-24T11:52:22.350108"
+  "fetched_at": "2026-07-31T12:09:53.770349"
 }

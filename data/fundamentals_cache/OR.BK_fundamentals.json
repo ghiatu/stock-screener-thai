@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "OR.BK",
-    "fetch_date": "2026-07-24T11:47:23.372376",
+    "fetch_date": "2026-07-31T12:04:55.756304",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 182421860193.0,
       "2025-06-30 00:00:00": 167166059435.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.21,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-24T11:47:23.373282"
+  "fetched_at": "2026-07-31T12:04:55.758096"
 }

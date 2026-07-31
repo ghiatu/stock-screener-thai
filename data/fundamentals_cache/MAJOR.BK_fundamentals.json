@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MAJOR.BK",
-    "fetch_date": "2026-07-17T11:26:16.247853",
+    "fetch_date": "2026-07-31T12:03:30.860621",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 1418969000.0,
       "2025-06-30 00:00:00": 1939518000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.14,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-17T11:26:16.249378"
+  "fetched_at": "2026-07-31T12:03:30.862288"
 }
