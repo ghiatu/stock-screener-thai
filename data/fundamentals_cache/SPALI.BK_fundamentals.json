@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SPALI.BK",
-    "fetch_date": "2026-07-27T13:04:52.311317",
+    "fetch_date": "2026-08-03T13:05:19.884261",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 3634016000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 20.733,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-27T13:04:52.312861"
+  "fetched_at": "2026-08-03T13:05:19.886239"
 }

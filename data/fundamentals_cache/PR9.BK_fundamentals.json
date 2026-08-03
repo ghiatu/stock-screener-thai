@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "PR9.BK",
-    "fetch_date": "2026-07-27T13:02:32.040625",
+    "fetch_date": "2026-08-03T13:02:59.752866",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 1239028000.0,
       "2025-06-30 00:00:00": 1277083000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.062,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-27T13:02:32.042151"
+  "fetched_at": "2026-08-03T13:02:59.754684"
 }

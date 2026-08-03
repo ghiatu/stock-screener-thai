@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TQM.BK",
-    "fetch_date": "2026-07-27T13:07:01.331522",
+    "fetch_date": "2026-08-03T13:07:27.848736",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 1101552000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 24.55,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-27T13:07:01.332675"
+  "fetched_at": "2026-08-03T13:07:27.850081"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BOFFICE.BK",
-    "fetch_date": "2026-07-27T12:55:47.971106",
+    "fetch_date": "2026-08-03T12:56:15.787921",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 220420122.0,
       "2025-06-30 00:00:00": 220251500.0,
@@ -25,5 +25,5 @@
     "operating_margin": 67.61,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-27T12:55:47.972266"
+  "fetched_at": "2026-08-03T12:56:15.789331"
 }

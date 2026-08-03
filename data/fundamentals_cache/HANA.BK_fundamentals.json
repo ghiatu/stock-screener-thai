@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "HANA.BK",
-    "fetch_date": "2026-07-27T12:58:26.028715",
+    "fetch_date": "2026-08-03T12:58:53.858403",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 5252077000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.193,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-27T12:58:26.030259"
+  "fetched_at": "2026-08-03T12:58:53.860219"
 }

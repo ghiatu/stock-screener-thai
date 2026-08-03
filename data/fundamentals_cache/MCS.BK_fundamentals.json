@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MCS.BK",
-    "fetch_date": "2026-07-27T13:00:34.472917",
+    "fetch_date": "2026-08-03T13:01:01.877130",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 1405484000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 3.458,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-27T13:00:34.474478"
+  "fetched_at": "2026-08-03T13:01:01.878936"
 }

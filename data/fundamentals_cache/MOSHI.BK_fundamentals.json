@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MOSHI.BK",
-    "fetch_date": "2026-07-27T13:01:00.039865",
+    "fetch_date": "2026-08-03T13:01:27.892438",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 838882893.0,
       "2025-06-30 00:00:00": 815532007.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.733,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-27T13:01:00.041356"
+  "fetched_at": "2026-08-03T13:01:27.894253"
 }

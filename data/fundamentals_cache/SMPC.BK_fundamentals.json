@@ -1,8 +1,9 @@
 {
   "data": {
     "ticker": "SMPC.BK",
-    "fetch_date": "2026-07-27T13:04:40.258600",
+    "fetch_date": "2026-08-03T13:05:08.049528",
     "quarterly_revenue": {
+      "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 1026512000.0,
       "2025-06-30 00:00:00": 1157878000.0,
       "2025-09-30 00:00:00": 857603000.0,
@@ -12,6 +13,7 @@
     "revenue_qoq_change": 27.18033733031155,
     "revenue_yoy_change": 2.611464844054429,
     "quarterly_eps": {
+      "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 0.25,
       "2025-06-30 00:00:00": 0.39,
       "2025-09-30 00:00:00": 0.24,
@@ -21,7 +23,7 @@
     "eps_qoq_change": null,
     "eps_yoy_change": 24.0,
     "gross_margin": 22.62,
-    "margin_change": 1.35,
+    "margin_change": NaN,
     "operating_margin": 15.81,
     "quarterly_inventory": {
       "2024-12-31 00:00:00": NaN,
@@ -35,5 +37,5 @@
     "inventory_to_sales_ratio": 0.701,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-27T13:04:40.260110"
+  "fetched_at": "2026-08-03T13:05:08.051267"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MGC.BK",
-    "fetch_date": "2026-07-27T13:00:42.932375",
+    "fetch_date": "2026-08-03T13:01:10.800152",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 4042039306.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.889,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-27T13:00:42.933900"
+  "fetched_at": "2026-08-03T13:01:10.802012"
 }

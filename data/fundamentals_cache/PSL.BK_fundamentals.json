@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "PSL.BK",
-    "fetch_date": "2026-07-27T13:02:49.966710",
+    "fetch_date": "2026-08-03T13:03:17.885120",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": 1457876908.0,
       "2025-03-31 00:00:00": 1036994000.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.127,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-27T13:02:49.968207"
+  "fetched_at": "2026-08-03T13:03:17.886999"
 }

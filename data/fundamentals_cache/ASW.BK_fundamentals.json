@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ASW.BK",
-    "fetch_date": "2026-07-27T12:54:57.088130",
+    "fetch_date": "2026-08-03T12:55:25.777499",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 1692220997.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 14.056,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-27T12:54:57.089616"
+  "fetched_at": "2026-08-03T12:55:25.779392"
 }
