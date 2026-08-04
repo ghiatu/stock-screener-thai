@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MST.BK",
-    "fetch_date": "2026-07-28T12:02:37.953300",
+    "fetch_date": "2026-08-04T12:08:14.760941",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 257855000.0,
       "2025-06-30 00:00:00": -31071717.0,
@@ -25,5 +25,5 @@
     "operating_margin": 30.23,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-28T12:02:37.954143"
+  "fetched_at": "2026-08-04T12:08:14.761874"
 }

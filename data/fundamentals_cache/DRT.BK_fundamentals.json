@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "DRT.BK",
-    "fetch_date": "2026-07-28T11:58:54.909437",
+    "fetch_date": "2026-08-04T12:04:31.012268",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 1359537000.0,
       "2025-06-30 00:00:00": 1217864000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.619,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-28T11:58:54.910421"
+  "fetched_at": "2026-08-04T12:04:31.013476"
 }

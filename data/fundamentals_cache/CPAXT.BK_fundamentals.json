@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "CPAXT.BK",
-    "fetch_date": "2026-07-21T11:48:10.384848",
+    "fetch_date": "2026-08-04T12:03:54.786369",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": 132638288944.0,
       "2025-03-31 00:00:00": 129300254000.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.348,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-21T11:48:10.386756"
+  "fetched_at": "2026-08-04T12:03:54.787547"
 }
