@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TPAC.BK",
-    "fetch_date": "2026-07-29T12:12:00.501374",
+    "fetch_date": "2026-08-10T11:18:09.850519",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 1819928000.0,
       "2025-06-30 00:00:00": 1668761000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.363,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-29T12:12:00.502454"
+  "fetched_at": "2026-08-10T11:18:09.852250"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "EASTW.BK",
-    "fetch_date": "2026-07-31T12:00:36.709033",
+    "fetch_date": "2026-08-10T11:08:49.776383",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 920276000.0,
       "2025-06-30 00:00:00": 899565000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.097,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-31T12:00:36.710776"
+  "fetched_at": "2026-08-10T11:08:49.778060"
 }

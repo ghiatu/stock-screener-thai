@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TU.BK",
-    "fetch_date": "2026-07-31T12:10:28.804749",
+    "fetch_date": "2026-08-10T11:18:42.795370",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": 35090309000.0,
       "2025-03-31 00:00:00": 29788920000.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 1.452,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-07-31T12:10:28.806605"
+  "fetched_at": "2026-08-10T11:18:42.797086"
 }
