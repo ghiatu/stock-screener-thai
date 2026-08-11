@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BOL.BK",
-    "fetch_date": "2026-08-03T12:56:16.818526",
+    "fetch_date": "2026-08-11T10:49:49.996626",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 182866000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 44.48,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-03T12:56:16.820024"
+  "fetched_at": "2026-08-11T10:49:49.998731"
 }

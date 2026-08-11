@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "PT.BK",
-    "fetch_date": "2026-08-03T13:03:19.942793",
+    "fetch_date": "2026-08-11T10:56:52.168761",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 778131000.0,
       "2025-06-30 00:00:00": 625590000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.381,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-03T13:03:19.944537"
+  "fetched_at": "2026-08-11T10:56:52.170240"
 }

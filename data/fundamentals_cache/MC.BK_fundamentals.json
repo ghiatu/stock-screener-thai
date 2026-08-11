@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MC.BK",
-    "fetch_date": "2026-08-03T13:00:58.952964",
+    "fetch_date": "2026-08-11T10:54:31.986662",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 1067083000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.986,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-03T13:00:58.954809"
+  "fetched_at": "2026-08-11T10:54:31.988221"
 }

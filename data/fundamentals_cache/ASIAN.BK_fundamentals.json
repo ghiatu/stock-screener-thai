@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ASIAN.BK",
-    "fetch_date": "2026-08-03T12:55:19.890660",
+    "fetch_date": "2026-08-11T10:48:50.096199",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 2690271000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.984,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-03T12:55:19.892502"
+  "fetched_at": "2026-08-11T10:48:50.097796"
 }

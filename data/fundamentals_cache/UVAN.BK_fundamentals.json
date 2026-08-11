@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "UVAN.BK",
-    "fetch_date": "2026-08-03T13:08:14.944900",
+    "fetch_date": "2026-08-11T11:01:51.102968",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 3112536000.0,
       "2025-06-30 00:00:00": 5530680000.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 0.21,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-03T13:08:14.946724"
+  "fetched_at": "2026-08-11T11:01:51.104445"
 }

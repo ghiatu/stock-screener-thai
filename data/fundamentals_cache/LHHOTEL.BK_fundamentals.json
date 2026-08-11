@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "LHHOTEL.BK",
-    "fetch_date": "2026-08-03T13:00:33.940462",
+    "fetch_date": "2026-08-11T10:54:06.892740",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 570087000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 96.68,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-03T13:00:33.941786"
+  "fetched_at": "2026-08-11T10:54:06.893940"
 }

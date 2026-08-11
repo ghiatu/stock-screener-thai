@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ASK.BK",
-    "fetch_date": "2026-08-03T12:55:21.728155",
+    "fetch_date": "2026-08-11T10:48:52.446662",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 1391281000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 18.08,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-03T12:55:21.729595"
+  "fetched_at": "2026-08-11T10:48:52.447858"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ROJNA.BK",
-    "fetch_date": "2026-08-03T13:03:47.941481",
+    "fetch_date": "2026-08-11T10:57:20.912177",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 3684287000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 2.372,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-03T13:03:47.943264"
+  "fetched_at": "2026-08-11T10:57:20.913689"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "LANNA.BK",
-    "fetch_date": "2026-08-03T13:00:27.883077",
+    "fetch_date": "2026-08-11T10:54:01.136631",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 3887076000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.2,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-03T13:00:27.884867"
+  "fetched_at": "2026-08-11T10:54:01.138149"
 }

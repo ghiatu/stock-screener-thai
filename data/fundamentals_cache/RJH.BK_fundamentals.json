@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "RJH.BK",
-    "fetch_date": "2026-08-03T13:03:43.904160",
+    "fetch_date": "2026-08-11T10:57:16.986702",
     "quarterly_revenue": {
       "2024-12-31 00:00:00": NaN,
       "2025-03-31 00:00:00": 654567377.57,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.119,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-03T13:03:43.905963"
+  "fetched_at": "2026-08-11T10:57:16.988202"
 }

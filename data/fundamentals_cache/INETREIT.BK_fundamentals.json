@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "INETREIT.BK",
-    "fetch_date": "2026-08-03T12:59:20.779155",
+    "fetch_date": "2026-08-11T10:52:53.865402",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 166665000.0,
       "2025-06-30 00:00:00": 173764000.0,
@@ -25,5 +25,5 @@
     "operating_margin": 92.45,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-03T12:59:20.780555"
+  "fetched_at": "2026-08-11T10:52:53.866804"
 }
