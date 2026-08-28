@@ -1,0 +1,27 @@
+{
+  "data": {
+    "ticker": "WASH.BK",
+    "fetch_date": "2026-08-28T21:18:11.574169",
+    "quarterly_revenue": {
+      "2025-03-31 00:00:00": 218847095.0,
+      "2025-06-30 00:00:00": NaN,
+      "2026-03-31 00:00:00": 258170546.0
+    },
+    "revenue_qoq_change": null,
+    "quarterly_eps": {
+      "2025-03-31 00:00:00": 0.052436,
+      "2025-06-30 00:00:00": NaN,
+      "2026-03-31 00:00:00": 0.05
+    },
+    "eps_qoq_change": null,
+    "gross_margin": 29.34,
+    "margin_change": NaN,
+    "operating_margin": 15.28,
+    "quarterly_inventory": {
+      "2026-03-31 00:00:00": 22997622.0
+    },
+    "inventory_to_sales_ratio": 0.089,
+    "inventory_breakdown_available": false
+  },
+  "fetched_at": "2026-08-28T21:18:11.575357"
+}
