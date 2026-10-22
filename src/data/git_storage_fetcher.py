@@ -1,7 +1,7 @@
 """Smart fetcher using Git-based storage for fundamentals and fresh price data.
 
 This module implements the optimal strategy:
-- Price data: ALWAYS fetch fresh (1 year history for 200-day SMA)
+- Price data: ALWAYS fetch fresh (2 year history for 200-day SMA)
 - Fundamental data: Store in Git repo, refresh based on earnings season
   - Earnings season: Refresh if >7 days old
   - Normal: Refresh if >90 days old
@@ -19,6 +19,8 @@ from typing import Dict, Optional
 
 import pandas as pd
 import yfinance as yf
+
+from .yfinance_history import download_histories
 
 logging.basicConfig(
     level=logging.INFO,
@@ -43,7 +45,7 @@ class GitStorageFetcher:
         logger.info(f"GitStorageFetcher initialized: {fundamentals_dir}")
 
     def fetch_price_fresh(self, ticker: str) -> pd.DataFrame:
-        """Fetch fresh price data (1 year, no caching).
+        """Fetch fresh daily data (2 years, no caching).
 
         Always fetches latest data to ensure current prices are included.
 
@@ -51,12 +53,12 @@ class GitStorageFetcher:
             ticker: Stock ticker
 
         Returns:
-            DataFrame with ~250 days of price data (DatetimeIndex)
+            DataFrame with actual available daily OHLC rows (DatetimeIndex)
         """
         try:
-            stock = yf.Ticker(ticker)
-            # Always fetch 1 year (250 trading days) - not 2 years!
-            data = stock.history(period='1y', interval='1d')
+            data = download_histories([ticker], period='2y').get(ticker, pd.DataFrame())
+            if 0 < len(data) < 200:
+                logger.warning('%s: Yahoo returned only %d valid days; at least 200 required', ticker, len(data))
 
             if not data.empty:
                 # Verify DatetimeIndex (yfinance should return this by default)

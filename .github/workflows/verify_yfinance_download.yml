@@ -1,0 +1,24 @@
+name: Verify adopted Yahoo downloader
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/data/yfinance_history.py'
+      - 'src/data/git_storage_fetcher.py'
+      - 'tests/test_yfinance_history.py'
+      - '.github/workflows/verify_yfinance_download.yml'
+  workflow_dispatch:
+jobs:
+  regression-tests:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Verify download parsing and benchmark safeguards
+        run: python -m pytest tests/test_yfinance_history.py tests/test_benchmark_recovery.py -q
