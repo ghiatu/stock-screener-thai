@@ -36,8 +36,8 @@ def analyze_spy_trend(benchmark_price_data: pd.DataFrame, current_benchmark_pric
     Returns:
         Dict with SET Index trend analysis
     """
-    if len(benchmark_price_data) < 220:
-        logger.warning("Insufficient SET Index price data (need 220 valid rows)")
+    if len(benchmark_price_data) < 194:
+        logger.warning("Insufficient SET Index price data (need 194 valid rows)")
         return {
             'phase': 0,
             'phase_name': 'Unknown',
@@ -47,7 +47,7 @@ def analyze_spy_trend(benchmark_price_data: pd.DataFrame, current_benchmark_pric
         }
 
     # Classify SET Index phase
-    phase_info = classify_phase(benchmark_price_data, current_benchmark_price)
+    phase_info = classify_phase(benchmark_price_data, current_benchmark_price, allow_benchmark_proxy=True)
 
     # Determine overall trend
     phase = phase_info['phase']
@@ -69,6 +69,8 @@ def analyze_spy_trend(benchmark_price_data: pd.DataFrame, current_benchmark_pric
         'phase_name': phase_info['phase_name'],
         'trend': trend,
         'confidence': phase_info['confidence'],
+        'long_ma_period': phase_info.get('long_ma_period', 200),
+        'long_ma_is_proxy': phase_info.get('long_ma_is_proxy', False),
         'sma_50': phase_info.get('sma_50'),
         'sma_200': phase_info.get('sma_200'),
         'slope_50': phase_info.get('slope_50'),
@@ -195,6 +197,9 @@ def format_benchmark_summary(spy_analysis: Dict, breadth: Dict) -> str:
 
     summary += f"Data source: {spy_analysis.get('source', 'unavailable')}\n"
 
+    if spy_analysis.get('long_ma_is_proxy'):
+        summary += f"APPROXIMATION: SMA{spy_analysis['long_ma_period']} replaces SMA200 for SET only; no missing prices are filled.\n"
+
     # SET Index Analysis with emoji
     phase = spy_analysis['phase']
     if phase == 2:
@@ -214,11 +219,14 @@ def format_benchmark_summary(spy_analysis: Dict, breadth: Dict) -> str:
     for period in (50, 200):
         slope = spy_analysis.get(f'slope_{period}')
         sma = spy_analysis.get(f'sma_{period}')
-        if slope is None or sma is None or pd.isna(slope) or pd.isna(sma):
-            summary += f"  ⚪ {period} SMA: N/A (insufficient data)\n"
+        label = f"{spy_analysis.get('long_ma_period', 200)} SMA proxy for SMA200" if period == 200 and spy_analysis.get('long_ma_is_proxy') else f'{period} SMA'
+        if sma is None or pd.isna(sma):
+            summary += f"  ⚪ {label}: N/A (insufficient data)\n"
         else:
-            emoji = "🟢" if slope > 0 else "🔴"
-            summary += f"  {emoji} {period} SMA: {CURRENCY_SYMBOL}{sma:.2f} (slope: {slope:.4f})\n"
+            slope_missing = slope is None or pd.isna(slope)
+            emoji = "⚪" if slope_missing else ("🟢" if slope > 0 else "🔴")
+            slope_text = "N/A (need more sessions)" if slope_missing else f"{slope:.4f}"
+            summary += f"  {emoji} {label}: {CURRENCY_SYMBOL}{sma:.2f} (slope: {slope_text})\n"
 
     confidence = spy_analysis.get('confidence', 0)
     if confidence >= 80:

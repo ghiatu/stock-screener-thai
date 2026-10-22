@@ -263,7 +263,7 @@ def calculate_distance_from_sma(price: float, sma: float) -> float:
     return ((price - sma) / sma) * 100
 
 
-def classify_phase(price_data: pd.DataFrame, current_price: float) -> Dict[str, any]:
+def classify_phase(price_data: pd.DataFrame, current_price: float, allow_benchmark_proxy: bool = False) -> Dict[str, any]:
     """Classify current market phase (1-4) based on price action rules.
 
     Phase 1: Base Building / Compression
@@ -297,12 +297,14 @@ def classify_phase(price_data: pd.DataFrame, current_price: float) -> Dict[str, 
     Returns:
         Dict with phase info
     """
-    if len(price_data) < 200:
+    minimum = 194 if allow_benchmark_proxy else 200
+    long_period = min(200, len(price_data)) if allow_benchmark_proxy else 200
+    if len(price_data) < minimum:
         return {
             'phase': 0,
             'phase_name': 'Insufficient Data',
             'confidence': 0.0,
-            'reasons': ['Need at least 200 days of data']
+            'reasons': [f'Need at least {minimum} days of data']
         }
 
     close = price_data['Close']
@@ -313,7 +315,7 @@ def classify_phase(price_data: pd.DataFrame, current_price: float) -> Dict[str, 
     # Calculate SMAs (50, 150, 200 for Minervini Trend Template)
     sma_50 = calculate_sma(close, 50)
     sma_150 = calculate_sma(close, 150)
-    sma_200 = calculate_sma(close, 200)
+    sma_200 = calculate_sma(close, long_period)
 
     if sma_50.isna().all() or sma_200.isna().all():
         return {
@@ -337,6 +339,7 @@ def classify_phase(price_data: pd.DataFrame, current_price: float) -> Dict[str, 
 
     # Calculate slopes
     slope_50 = calculate_slope(sma_50, 20)
+    long_slope_available = not allow_benchmark_proxy or len(sma_200.dropna()) >= 2
     slope_200 = calculate_slope(sma_200, 20)
 
     # Volatility analysis
@@ -364,7 +367,7 @@ def classify_phase(price_data: pd.DataFrame, current_price: float) -> Dict[str, 
         reasons.append(f'50 SMA below 200 SMA (Death Cross)')
         confidence = 70
 
-        if slope_50 < 0 and slope_200 < 0:
+        if long_slope_available and slope_50 < 0 and slope_200 < 0:
             reasons.append('Both SMAs declining')
             confidence += 20
 
@@ -383,7 +386,7 @@ def classify_phase(price_data: pd.DataFrame, current_price: float) -> Dict[str, 
         reasons.append(f'50 SMA rising (slope: {slope_50:.3f}%)')
         confidence = 70
 
-        if slope_200 > 0:
+        if long_slope_available and slope_200 > 0:
             reasons.append(f'200 SMA also rising (slope: {slope_200:.3f}%)')
             confidence += 15
 
@@ -405,7 +408,7 @@ def classify_phase(price_data: pd.DataFrame, current_price: float) -> Dict[str, 
             reasons.append('50 SMA flattening')
             confidence += 20
 
-        if abs(slope_50) < abs(slope_200) * 0.5:
+        if long_slope_available and abs(slope_50) < abs(slope_200) * 0.5:
             reasons.append('Momentum weakening')
             confidence += 20
 
@@ -420,7 +423,7 @@ def classify_phase(price_data: pd.DataFrame, current_price: float) -> Dict[str, 
             reasons.append(f'50 SMA flat (slope: {slope_50:.3f}%)')
             confidence += 15
 
-        if abs(slope_200) < 0.05:
+        if long_slope_available and abs(slope_200) < 0.05:
             reasons.append(f'200 SMA flat (slope: {slope_200:.3f}%)')
             confidence += 10
 
@@ -432,6 +435,9 @@ def classify_phase(price_data: pd.DataFrame, current_price: float) -> Dict[str, 
             reasons.append(f'Volume below average ({volume_ratio:.1f}x)')
             confidence += 10
 
+    if allow_benchmark_proxy and long_period < 200:
+        reasons = [r.replace('200 SMA', f'{long_period} SMA (proxy for SMA200)') for r in reasons]
+
     return {
         'phase': phase,
         'phase_name': phase_name,
@@ -441,7 +447,9 @@ def classify_phase(price_data: pd.DataFrame, current_price: float) -> Dict[str, 
         'sma_150': round(sma_150_val, 2),
         'sma_200': round(sma_200_val, 2),
         'slope_50': round(slope_50, 4),
-        'slope_200': round(slope_200, 4),
+        'slope_200': round(slope_200, 4) if long_slope_available or not allow_benchmark_proxy else None,
+        'long_ma_period': long_period,
+        'long_ma_is_proxy': long_period < 200,
         'distance_from_50sma': round(calculate_distance_from_sma(current_price, sma_50_val), 2),
         'distance_from_200sma': round(calculate_distance_from_sma(current_price, sma_200_val), 2),
         'week_52_high': round(week_52_high, 2),

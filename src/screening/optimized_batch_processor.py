@@ -22,7 +22,7 @@ import yfinance as yf
 from src.data.fetcher import YahooFinanceFetcher
 from src.data.fundamentals_fetcher import fetch_quarterly_financials, analyze_fundamentals_for_signal
 from src.data.git_storage_fetcher import GitStorageFetcher
-from src.data.set_index_fetcher import fetch_set_index_history
+from src.data.siamchart_index import fetch_siamchart_index
 from ..screening.phase_indicators import classify_phase, calculate_relative_strength, detect_vcp_pattern
 
 logging.basicConfig(
@@ -187,11 +187,11 @@ class OptimizedBatchProcessor:
 
             spy_hist = usable(spy_hist)
             if len(spy_hist) < 220:
-                logger.warning(f"{BENCHMARK_TICKER}: only {len(spy_hist)} valid Yahoo rows; trying SET official index history")
+                logger.warning(f"{BENCHMARK_TICKER}: only {len(spy_hist)} valid Yahoo rows; trying SiamChart SET index history")
                 try:
-                    spy_hist = fetch_set_index_history(min_rows=220)
+                    spy_hist = fetch_siamchart_index()
                 except Exception as exc:
-                    logger.warning(f"Official SET fallback failed: {exc}")
+                    logger.warning(f"SiamChart SET fallback failed: {exc}")
                     if spy_hist.empty:
                         logger.error(f"{BENCHMARK_TICKER}: no valid benchmark data")
                         return False
@@ -308,7 +308,7 @@ class OptimizedBatchProcessor:
                 price_data['Close'],
                 self.spy_data['Close'],
                 period=63
-            ) if len(self.spy_data) >= 220 else pd.Series(float('nan'), index=price_data.index)
+            ) if len(self.spy_data) >= 194 else pd.Series(float('nan'), index=price_data.index)
 
             # VCP pattern detection (only for Phase 1/2 - base building or breakout)
             vcp_data = {}

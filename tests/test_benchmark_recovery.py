@@ -23,28 +23,28 @@ def processor(frame):
     return obj
 
 
-def test_truncated_yahoo_recovers_from_official_set_only():
+def test_truncated_yahoo_recovers_from_siamchart_set_only():
     obj = processor(history(1))
     official = history(241)
-    official.attrs['source'] = 'Stock Exchange of Thailand (set.or.th)'
-    with patch('src.screening.optimized_batch_processor.fetch_set_index_history', return_value=official) as fetch:
+    official.attrs['source'] = 'SiamChart (SET index only)'
+    with patch('src.screening.optimized_batch_processor.fetch_siamchart_index', return_value=official) as fetch:
         assert obj.fetch_spy_data()
-        fetch.assert_called_once_with(min_rows=220)
+        fetch.assert_called_once_with()
         assert len(obj.spy_data) == 241
     assert analyze_spy_trend(obj.spy_data, obj.spy_price)['slope_50'] is not None
-    assert 'set.or.th' in analyze_spy_trend(obj.spy_data, obj.spy_price)['source']
+    assert 'SiamChart' in analyze_spy_trend(obj.spy_data, obj.spy_price)['source']
 
 
 def test_valid_yahoo_history_does_not_call_set():
     obj = processor(history(227))
-    with patch('src.screening.optimized_batch_processor.fetch_set_index_history') as fetch:
+    with patch('src.screening.optimized_batch_processor.fetch_siamchart_index') as fetch:
         assert obj.fetch_spy_data()
         fetch.assert_not_called()
 
 
 def test_both_sources_unavailable_keep_signals_disabled():
     obj = processor(history(1))
-    with patch('src.screening.optimized_batch_processor.fetch_set_index_history', side_effect=ValueError('Unavailable')):
+    with patch('src.screening.optimized_batch_processor.fetch_siamchart_index', side_effect=ValueError('Unavailable')):
         assert obj.fetch_spy_data()
         assert len(obj.spy_data) == 1
         analysis = analyze_spy_trend(obj.spy_data, obj.spy_price)

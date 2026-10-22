@@ -8,6 +8,8 @@ on:
       - 'src/screening/optimized_batch_processor.py'
       - 'tests/test_benchmark_recovery.py'
       - 'src/data/set_index_fetcher.py'
+      - 'src/data/siamchart_index.py'
+      - 'tests/test_siamchart_index.py'
       - 'tests/test_set_index_fetcher.py'
       - '.github/workflows/daily_screening_git_storage.yml'
   schedule:
@@ -75,7 +77,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Test benchmark recovery
-        run: python -m pytest tests/test_benchmark_recovery.py tests/test_set_index_fetcher.py tests/test_yfinance_history.py -q
+        run: python -m pytest tests/test_benchmark_recovery.py tests/test_set_index_fetcher.py tests/test_yfinance_history.py tests/test_siamchart_index.py -q
 
       - name: Run optimized stock screening
         env:
@@ -146,6 +148,9 @@ jobs:
 
           # Add fundamental cache directory
           git add data/fundamentals_cache/
+          if [ -d data/benchmark_cache ]; then
+            git add data/benchmark_cache/
+          fi
 
           # Check if there are changes
           if git diff --staged --quiet; then
