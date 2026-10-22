@@ -12,6 +12,7 @@ on:
       - 'tests/test_siamchart_index.py'
       - 'tests/test_set_index_fetcher.py'
       - '.github/workflows/daily_screening_git_storage.yml'
+      - '.gitignore'
   schedule:
     # Run at 7am EST (12:00 UTC) on weekdays
     - cron: '0 10 * * 1-5'
@@ -140,7 +141,7 @@ jobs:
             echo "No metadata file found"
           fi
 
-      - name: Commit updated fundamental cache
+      - name: Commit updated data caches
         id: commit
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
