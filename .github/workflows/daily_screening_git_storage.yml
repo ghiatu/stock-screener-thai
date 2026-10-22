@@ -7,6 +7,8 @@ on:
       - 'src/screening/benchmark.py'
       - 'src/screening/optimized_batch_processor.py'
       - 'tests/test_benchmark_recovery.py'
+      - 'src/data/set_index_fetcher.py'
+      - 'tests/test_set_index_fetcher.py'
       - '.github/workflows/daily_screening_git_storage.yml'
   schedule:
     # Run at 7am EST (12:00 UTC) on weekdays
@@ -73,7 +75,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Test benchmark recovery
-        run: python -m pytest tests/test_benchmark_recovery.py -q
+        run: python -m pytest tests/test_benchmark_recovery.py tests/test_set_index_fetcher.py tests/test_yfinance_history.py -q
 
       - name: Run optimized stock screening
         env:
@@ -98,7 +100,12 @@ jobs:
           # Conservative mode to avoid rate limits
           # --git-storage flag enables Git-based fundamental storage
           set -o pipefail
-          python -u run_optimized_scan.py --conservative --git-storage 2>&1 | tee data/logs/screening.log
+          SCAN_ARGS=(--conservative --git-storage)
+          # Push verification scans 100 stocks; scheduled/manual runs scan all.
+          if [ "${{ github.event_name }}" = "push" ]; then
+            SCAN_ARGS+=(--test-mode)
+          fi
+          python -u run_optimized_scan.py "${SCAN_ARGS[@]}" 2>&1 | tee data/logs/screening.log
 
       - name: Show fundamental refresh stats
         if: always()

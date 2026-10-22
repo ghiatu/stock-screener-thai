@@ -11,3 +11,5 @@ pyyaml>=6.0
 numpy>=1.24.0
 robin-stocks>=3.0.0  # Read-only position tracking (optional)
 requests
+
+curl_cffi>=0.7  # SET website session (also used by yfinance)

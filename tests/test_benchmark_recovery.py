@@ -23,37 +23,34 @@ def processor(frame):
     return obj
 
 
-def test_truncated_response_recovers_with_explicit_dates():
+def test_truncated_yahoo_recovers_from_official_set_only():
     obj = processor(history(1))
-    with patch('src.screening.optimized_batch_processor.yf.Ticker') as ticker:
-        ticker.return_value.history.return_value = history(500)
+    official = history(241)
+    official.attrs['source'] = 'Stock Exchange of Thailand (set.or.th)'
+    with patch('src.screening.optimized_batch_processor.fetch_set_index_history', return_value=official) as fetch:
         assert obj.fetch_spy_data()
-        assert len(obj.spy_data) == 500
-        assert 'start' in ticker.return_value.history.call_args.kwargs
-        assert 'period' not in ticker.return_value.history.call_args.kwargs
+        fetch.assert_called_once_with(min_rows=220)
+        assert len(obj.spy_data) == 241
     assert analyze_spy_trend(obj.spy_data, obj.spy_price)['slope_50'] is not None
+    assert 'set.or.th' in analyze_spy_trend(obj.spy_data, obj.spy_price)['source']
 
 
-def test_valid_history_does_not_retry():
+def test_valid_yahoo_history_does_not_call_set():
     obj = processor(history(227))
-    with patch('src.screening.optimized_batch_processor.yf.Ticker') as ticker:
+    with patch('src.screening.optimized_batch_processor.fetch_set_index_history') as fetch:
         assert obj.fetch_spy_data()
-        ticker.assert_not_called()
+        fetch.assert_not_called()
 
 
-def test_retries_reject_short_and_nan_history():
+def test_both_sources_unavailable_keep_signals_disabled():
     obj = processor(history(1))
-    invalid = history(500)
-    invalid['Close'] = np.nan
-    with patch('src.screening.optimized_batch_processor.yf.Ticker') as ticker:
-        ticker.return_value.history.side_effect = [history(1), invalid]
+    with patch('src.screening.optimized_batch_processor.fetch_set_index_history', side_effect=ValueError('Unavailable')):
         assert obj.fetch_spy_data()
-        assert ticker.return_value.history.call_count == 2
         assert len(obj.spy_data) == 1
         analysis = analyze_spy_trend(obj.spy_data, obj.spy_price)
         rec = should_generate_signals(analysis, calculate_market_breadth([]))
-        assert not rec["should_generate_buys"]
-        assert not rec["should_generate_sells"]
+        assert not rec['should_generate_buys']
+        assert not rec['should_generate_sells']
 
 
 def test_report_handles_insufficient_benchmark(tmp_path):

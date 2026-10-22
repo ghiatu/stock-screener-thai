@@ -64,6 +64,7 @@ def analyze_spy_trend(benchmark_price_data: pd.DataFrame, current_benchmark_pric
 
     return {
         'ticker': BENCHMARK_TICKER,
+        'source': benchmark_price_data.attrs.get('source', 'Yahoo Finance (yfinance)'),
         'phase': phase,
         'phase_name': phase_info['phase_name'],
         'trend': trend,
@@ -191,6 +192,8 @@ def format_benchmark_summary(spy_analysis: Dict, breadth: Dict) -> str:
     summary = f"\n{'='*60}\n"
     summary += "BENCHMARK SUMMARY (SET Index)\n"
     summary += f"{'='*60}\n\n"
+
+    summary += f"Data source: {spy_analysis.get('source', 'unavailable')}\n"
 
     # SET Index Analysis with emoji
     phase = spy_analysis['phase']

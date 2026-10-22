@@ -22,6 +22,7 @@ import yfinance as yf
 from src.data.fetcher import YahooFinanceFetcher
 from src.data.fundamentals_fetcher import fetch_quarterly_financials, analyze_fundamentals_for_signal
 from src.data.git_storage_fetcher import GitStorageFetcher
+from src.data.set_index_fetcher import fetch_set_index_history
 from ..screening.phase_indicators import classify_phase, calculate_relative_strength, detect_vcp_pattern
 
 logging.basicConfig(
@@ -186,25 +187,17 @@ class OptimizedBatchProcessor:
 
             spy_hist = usable(spy_hist)
             if len(spy_hist) < 220:
-                logger.warning(f"{BENCHMARK_TICKER}: only {len(spy_hist)} valid rows; retrying explicit date range")
-                end = datetime.now() + timedelta(days=1)
-                start = end - timedelta(days=730)
-                for attempt in range(2):
-                    try:
-                        candidate = yf.Ticker(BENCHMARK_TICKER).history(
-                            start=start.strftime('%Y-%m-%d'),
-                            end=end.strftime('%Y-%m-%d'), interval='1d')
-                        candidate = usable(candidate)
-                        if len(candidate) >= 220:
-                            spy_hist = candidate
-                            break
-                    except Exception as exc:
-                        logger.warning(f"Benchmark retry {attempt + 1} failed: {exc}")
-                else:
+                logger.warning(f"{BENCHMARK_TICKER}: only {len(spy_hist)} valid Yahoo rows; trying SET official index history")
+                try:
+                    spy_hist = fetch_set_index_history(min_rows=220)
+                except Exception as exc:
+                    logger.warning(f"Official SET fallback failed: {exc}")
                     if spy_hist.empty:
                         logger.error(f"{BENCHMARK_TICKER}: no valid benchmark data")
                         return False
                     logger.warning("Benchmark history incomplete: report will show N/A; trading signals disabled")
+            else:
+                spy_hist.attrs['source'] = 'Yahoo Finance (yfinance)'
 
             self.spy_data = spy_hist
             self.spy_price = spy_hist['Close'].iloc[-1]
