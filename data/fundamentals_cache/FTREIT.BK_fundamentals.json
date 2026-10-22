@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "FTREIT.BK",
-    "fetch_date": "2026-08-11T10:51:58.850172",
+    "fetch_date": "2026-10-22T01:52:42.145530",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 1066525000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 78.36,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-11T10:51:58.851351"
+  "fetched_at": "2026-10-22T01:52:42.146902"
 }
