@@ -173,15 +173,38 @@ class OptimizedBatchProcessor:
             else:
                 spy_hist = self.fetcher.fetch_price_history(BENCHMARK_TICKER, period='1y')
 
-            if spy_hist.empty:
-                logger.error(f"Failed to fetch {BENCHMARK_TICKER} data")
-                return False
+            # Yahoo can return a nonempty but truncated response for period='1y'.
+            def usable(frame):
+                if not isinstance(frame.index, pd.DatetimeIndex):
+                    return pd.DataFrame()
+                if not {'Close', 'High', 'Low'}.issubset(frame.columns):
+                    return pd.DataFrame()
+                frame = frame.sort_index()
+                frame = frame.loc[~frame.index.duplicated(keep='last')]
+                frame = frame.dropna(subset=['Close', 'High', 'Low'])
+                return frame.loc[(frame[['Close', 'High', 'Low']] > 0).all(axis=1)]
 
-            # Ensure DatetimeIndex (yfinance should return this, but verify)
-            if not isinstance(spy_hist.index, pd.DatetimeIndex):
-                logger.error(f"{BENCHMARK_TICKER} has invalid index type: {type(spy_hist.index)}")
-                logger.error(f"{BENCHMARK_TICKER} index: {spy_hist.index}")
-                return False
+            spy_hist = usable(spy_hist)
+            if len(spy_hist) < 220:
+                logger.warning(f"{BENCHMARK_TICKER}: only {len(spy_hist)} valid rows; retrying explicit date range")
+                end = datetime.now() + timedelta(days=1)
+                start = end - timedelta(days=730)
+                for attempt in range(2):
+                    try:
+                        candidate = yf.Ticker(BENCHMARK_TICKER).history(
+                            start=start.strftime('%Y-%m-%d'),
+                            end=end.strftime('%Y-%m-%d'), interval='1d')
+                        candidate = usable(candidate)
+                        if len(candidate) >= 220:
+                            spy_hist = candidate
+                            break
+                    except Exception as exc:
+                        logger.warning(f"Benchmark retry {attempt + 1} failed: {exc}")
+                else:
+                    if spy_hist.empty:
+                        logger.error(f"{BENCHMARK_TICKER}: no valid benchmark data")
+                        return False
+                    logger.warning("Benchmark history incomplete: report will show N/A; trading signals disabled")
 
             self.spy_data = spy_hist
             self.spy_price = spy_hist['Close'].iloc[-1]
@@ -292,7 +315,7 @@ class OptimizedBatchProcessor:
                 price_data['Close'],
                 self.spy_data['Close'],
                 period=63
-            )
+            ) if len(self.spy_data) >= 220 else pd.Series(float('nan'), index=price_data.index)
 
             # VCP pattern detection (only for Phase 1/2 - base building or breakout)
             vcp_data = {}

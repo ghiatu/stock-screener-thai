@@ -36,13 +36,14 @@ def analyze_spy_trend(benchmark_price_data: pd.DataFrame, current_benchmark_pric
     Returns:
         Dict with SET Index trend analysis
     """
-    if benchmark_price_data.empty:
-        logger.warning("Empty SET Index price data")
+    if len(benchmark_price_data) < 220:
+        logger.warning("Insufficient SET Index price data (need 220 valid rows)")
         return {
             'phase': 0,
             'phase_name': 'Unknown',
             'trend': 'unknown',
-            'error': 'No data'
+            'error': 'Insufficient history',
+            'current_price': current_benchmark_price
         }
 
     # Classify SET Index phase
@@ -151,6 +152,9 @@ def classify_market_regime(spy_analysis: Dict, breadth: Dict) -> str:
     benchmark_phase = spy_analysis.get('phase', 0)
     phase_2_pct = breadth.get('phase_2_pct', 0)
 
+    if benchmark_phase not in (1, 2, 3, 4):
+        return 'UNKNOWN (insufficient benchmark data)'
+
     # Strong Risk-On conditions
     if benchmark_phase == 2 and phase_2_pct > 40:
         return 'RISK-ON (Strong)'
@@ -204,13 +208,14 @@ def format_benchmark_summary(spy_analysis: Dict, breadth: Dict) -> str:
     summary += f"  Trend: {spy_analysis['trend']}\n"
     summary += f"  Current Price: {CURRENCY_SYMBOL}{spy_analysis.get('current_price', 0):.2f}\n"
 
-    slope_50 = spy_analysis.get('slope_50', 0)
-    slope_50_emoji = "🟢" if slope_50 > 0 else "🔴"
-    summary += f"  {slope_50_emoji} 50 SMA: {CURRENCY_SYMBOL}{spy_analysis.get('sma_50', 0):.2f} (slope: {slope_50:.4f})\n"
-
-    slope_200 = spy_analysis.get('slope_200', 0)
-    slope_200_emoji = "🟢" if slope_200 > 0 else "🔴"
-    summary += f"  {slope_200_emoji} 200 SMA: {CURRENCY_SYMBOL}{spy_analysis.get('sma_200', 0):.2f} (slope: {slope_200:.4f})\n"
+    for period in (50, 200):
+        slope = spy_analysis.get(f'slope_{period}')
+        sma = spy_analysis.get(f'sma_{period}')
+        if slope is None or sma is None or pd.isna(slope) or pd.isna(sma):
+            summary += f"  ⚪ {period} SMA: N/A (insufficient data)\n"
+        else:
+            emoji = "🟢" if slope > 0 else "🔴"
+            summary += f"  {emoji} {period} SMA: {CURRENCY_SYMBOL}{sma:.2f} (slope: {slope:.4f})\n"
 
     confidence = spy_analysis.get('confidence', 0)
     if confidence >= 80:
@@ -254,7 +259,9 @@ def format_benchmark_summary(spy_analysis: Dict, breadth: Dict) -> str:
 
     # Interpretation
     summary += "\nInterpretation:\n"
-    if 'RISK-ON' in regime:
+    if spy_analysis.get('phase', 0) == 0:
+        summary += '  WARNING: Benchmark history unavailable or insufficient. Buy/sell signals disabled.\n'
+    elif 'RISK-ON' in regime:
         summary += "  🟢 Favorable environment for breakout trades\n"
         summary += "  → Focus on Phase 2 breakouts with strong RS\n"
     elif 'RISK-OFF' in regime:
@@ -298,8 +305,8 @@ def should_generate_signals(spy_analysis: Dict, breadth: Dict,
     else:
         reasons.append(f"SET Index in unfavorable phase ({benchmark_phase})")
 
-    # Sell signals - always generate if applicable
-    should_sell = True
+    # Signals require a usable benchmark for relative strength.
+    should_sell = benchmark_phase in (1, 2, 3, 4)
 
     return {
         'should_generate_buys': should_buy,

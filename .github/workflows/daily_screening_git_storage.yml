@@ -1,6 +1,13 @@
 name: Daily Stock Screening (Git-Based Storage)
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/screening/benchmark.py'
+      - 'src/screening/optimized_batch_processor.py'
+      - 'tests/test_benchmark_recovery.py'
+      - '.github/workflows/daily_screening_git_storage.yml'
   schedule:
     # Run at 7am EST (12:00 UTC) on weekdays
     - cron: '0 10 * * 1-5'
@@ -65,6 +72,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Test benchmark recovery
+        run: python -m pytest tests/test_benchmark_recovery.py -q
+
       - name: Run optimized stock screening
         env:
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
@@ -87,7 +97,8 @@ jobs:
 
           # Conservative mode to avoid rate limits
           # --git-storage flag enables Git-based fundamental storage
-          python run_optimized_scan.py --conservative --git-storage
+          set -o pipefail
+          python -u run_optimized_scan.py --conservative --git-storage 2>&1 | tee data/logs/screening.log
 
       - name: Show fundamental refresh stats
         if: always()
@@ -177,6 +188,7 @@ jobs:
             fi
           fi
       - name: Send Report to Telegram
+        if: github.event_name != 'push'
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
