@@ -89,6 +89,7 @@ jobs:
           EMAIL_SMTP_PORT: ${{ secrets.EMAIL_SMTP_PORT || '587' }}
           FORCE_FULL_REFRESH: ${{ github.event.inputs.force_full_refresh || 'false' }}
           CACHED_STOCKS: ${{ steps.cache-check.outputs.cached_stocks }}
+          FULL_SCAN_REQUEST: ${{ contains(github.event.head_commit.message, '[full-scan]') }}
         run: |
           echo "Starting screening with:"
           echo "  - Fresh price data for all stocks (1 year history)"
@@ -104,11 +105,116 @@ jobs:
           # --git-storage flag enables Git-based fundamental storage
           set -o pipefail
           SCAN_ARGS=(--conservative --git-storage)
-          # Push verification scans 100 stocks; scheduled/manual runs scan all.
-          if [ "${{ github.event_name }}" = "push" ]; then
+          # Ordinary pushes scan 100 stocks; [full-scan], schedule and manual runs scan all.
+          if [ "${{ github.event_name }}" = "push" ] && [ "$FULL_SCAN_REQUEST" != "true" ]; then
             SCAN_ARGS+=(--test-mode)
           fi
           python -u run_optimized_scan.py "${SCAN_ARGS[@]}" 2>&1 | tee data/logs/screening.log
+
+      - name: Verify complete report file
+        run: |
+          test -s data/daily_scans/latest_optimized_scan.txt
+          grep -q '^END OF SCAN
+        if: always()
+        run: |
+          echo "=== Fundamental Cache Statistics ==="
+          if [ -f "data/fundamentals_cache/metadata.json" ]; then
+            echo "Latest updates:"
+            python3 << 'PYTHON_SCRIPT'
+          import json
+          from datetime import datetime
+
+          try:
+              with open("data/fundamentals_cache/metadata.json", "r") as f:
+                  metadata = json.load(f)
+
+              # Show last 10 updated stocks
+              updates = [(ticker, data["last_updated"]) for ticker, data in metadata.items()]
+              updates.sort(key=lambda x: x[1], reverse=True)
+
+              print(f"Total tracked: {len(updates)} stocks")
+              print("\nLast 10 updates:")
+              for ticker, timestamp in updates[:10]:
+                  dt = datetime.fromisoformat(timestamp)
+                  formatted = dt.strftime("%Y-%m-%d %H:%M")
+                  print(f"  {ticker}: {formatted}")
+          except Exception as e:
+              print(f"Could not read metadata: {e}")
+          PYTHON_SCRIPT
+          else
+            echo "No metadata file found"
+          fi
+
+      - name: Commit updated data caches
+        id: commit
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Add fundamental cache directory
+          git add data/fundamentals_cache/
+          if [ -d data/benchmark_cache ]; then
+            git add data/benchmark_cache/
+          fi
+
+          # Check if there are changes
+          if git diff --staged --quiet; then
+            echo "No fundamental cache changes to commit"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            CHANGED_FILES=$(git diff --staged --name-only | wc -l)
+            echo "Committing $CHANGED_FILES updated fundamental files"
+            git commit -m "chore: update fundamental cache ($CHANGED_FILES stocks) - ${{ steps.date.outputs.date }}"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Push changes
+        if: steps.commit.outputs.has_changes == 'true'
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+      - name: Upload screening results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screening-results-${{ steps.date.outputs.date }}
+          path: |
+            data/daily_scans/
+            data/logs/
+          if-no-files-found: warn  # Don't fail if no files found
+          retention-days: 90  # Keep screening results for 90 days
+
+      - name: Cache size report
+        if: always()
+        run: |
+          echo "=== Git Repository Impact ==="
+          if [ -d "data/fundamentals_cache" ]; then
+            CACHE_SIZE=$(du -sh data/fundamentals_cache | cut -f1)
+            CACHE_FILES=$(find data/fundamentals_cache -name "*.json" | wc -l | tr -d ' ')
+
+            echo "Fundamental cache directory size: $CACHE_SIZE"
+            echo "Total files: $CACHE_FILES"
+            echo ""
+            echo "Today's commit impact:"
+            if [ "${{ steps.commit.outputs.has_changes }}" == "true" ]; then
+              git show --stat | tail -5
+            else
+              echo "  No changes committed"
+            fi
+          fi
+      - name: Send Report to Telegram
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[full-scan]')
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: "รายงานสแกนหุ้นไทยเสร็จแล้วครับ — แนบไฟล์รายงานฉบับเต็ม"
+          document: data/daily_scans/latest_optimized_scan.txt
+ data/daily_scans/latest_optimized_scan.txt
+          wc -c data/daily_scans/latest_optimized_scan.txt
+          sha256sum data/daily_scans/latest_optimized_scan.txt
 
       - name: Show fundamental refresh stats
         if: always()

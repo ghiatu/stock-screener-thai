@@ -49,7 +49,7 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
 
     output = []
     output.append("="*80)
-    output.append("OPTIMIZED FULL MARKET SCAN - SET50 THAI STOCKS")
+    output.append("OPTIMIZED FULL MARKET SCAN - THAI STOCKS")
     output.append(f"Scan Date: {date_str}")
     output.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     output.append("="*80)
