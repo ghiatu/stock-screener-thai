@@ -10044,7 +10044,7 @@
     "in_earnings_season": true
   },
   "BOL.BK": {
-    "last_updated": "2026-08-11T10:49:50.002193",
+    "last_updated": "2026-10-22T14:51:58.318531",
     "in_earnings_season": true
   },
   "BPP.BK": {
@@ -10228,7 +10228,7 @@
     "in_earnings_season": true
   },
   "MCS.BK": {
-    "last_updated": "2026-08-11T10:54:35.096267",
+    "last_updated": "2026-10-22T14:56:38.420031",
     "in_earnings_season": true
   },
   "MEB.BK": {
@@ -12109,6 +12109,10 @@
   },
   "SPI.BK": {
     "last_updated": "2026-10-22T01:59:38.341805",
+    "in_earnings_season": true
+  },
+  "NOVA.BK": {
+    "last_updated": "2026-10-22T14:57:34.669227",
     "in_earnings_season": true
   }
 }
