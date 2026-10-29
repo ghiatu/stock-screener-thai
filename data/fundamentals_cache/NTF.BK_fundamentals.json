@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "NTF.BK",
-    "fetch_date": "2026-10-22T01:56:16.190953",
+    "fetch_date": "2026-10-29T16:41:32.055060",
     "quarterly_revenue": {
       "2025-06-30 00:00:00": 1420190167.0,
       "2025-09-30 00:00:00": 445652937.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.011,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:56:16.192682"
+  "fetched_at": "2026-10-29T16:41:32.056921"
 }

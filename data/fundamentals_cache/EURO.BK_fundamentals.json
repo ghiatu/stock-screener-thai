@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "EURO.BK",
-    "fetch_date": "2026-10-22T01:52:24.071317",
+    "fetch_date": "2026-10-29T16:37:38.958725",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 354101045.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 2.667,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:52:24.073164"
+  "fetched_at": "2026-10-29T16:37:38.960467"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "KBS.BK",
-    "fetch_date": "2026-10-22T01:54:12.278392",
+    "fetch_date": "2026-10-29T16:39:28.069248",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 2633869000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.255,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:54:12.280179"
+  "fetched_at": "2026-10-29T16:39:28.071028"
 }

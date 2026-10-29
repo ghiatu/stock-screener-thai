@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TIDLOR.BK",
-    "fetch_date": "2026-10-22T02:00:57.162091",
+    "fetch_date": "2026-10-29T16:46:12.073174",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 5724569000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 39.98,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T02:00:57.163457"
+  "fetched_at": "2026-10-29T16:46:12.074502"
 }

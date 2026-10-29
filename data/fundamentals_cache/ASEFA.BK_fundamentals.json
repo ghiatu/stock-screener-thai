@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ASEFA.BK",
-    "fetch_date": "2026-10-22T01:49:35.292797",
+    "fetch_date": "2026-10-29T16:34:48.970362",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 599379265.0,
@@ -36,5 +36,5 @@
     "inventory_to_sales_ratio": 0.627,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:49:35.294531"
+  "fetched_at": "2026-10-29T16:34:48.972107"
 }

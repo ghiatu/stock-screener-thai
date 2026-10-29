@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TEAM.BK",
-    "fetch_date": "2026-10-22T02:00:35.210191",
+    "fetch_date": "2026-10-29T16:45:50.176533",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 694832000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.021,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T02:00:35.212046"
+  "fetched_at": "2026-10-29T16:45:50.178280"
 }

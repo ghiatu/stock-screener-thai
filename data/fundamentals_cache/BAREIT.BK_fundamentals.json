@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BAREIT.BK",
-    "fetch_date": "2026-10-22T01:49:59.195742",
+    "fetch_date": "2026-10-29T16:35:13.052312",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 294145000.0,
       "2025-06-30 00:00:00": 297064000.0,
@@ -25,5 +25,5 @@
     "operating_margin": 91.84,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:49:59.197042"
+  "fetched_at": "2026-10-29T16:35:13.053778"
 }

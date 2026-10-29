@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "AURA.BK",
-    "fetch_date": "2026-10-22T01:49:48.202337",
+    "fetch_date": "2026-10-29T16:35:02.021349",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 8827322000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.035,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:49:48.204128"
+  "fetched_at": "2026-10-29T16:35:02.023079"
 }

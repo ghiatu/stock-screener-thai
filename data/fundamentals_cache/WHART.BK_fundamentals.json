@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "WHART.BK",
-    "fetch_date": "2026-10-22T02:02:52.204046",
+    "fetch_date": "2026-10-29T16:48:05.121407",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 862872643.0,
@@ -27,5 +27,5 @@
     "operating_margin": 90.84,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T02:02:52.205518"
+  "fetched_at": "2026-10-29T16:48:05.122798"
 }

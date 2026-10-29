@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "KCE.BK",
-    "fetch_date": "2026-10-22T01:54:16.166296",
+    "fetch_date": "2026-10-29T16:39:32.122889",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 3285396000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.181,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:54:16.168091"
+  "fetched_at": "2026-10-29T16:39:32.124609"
 }

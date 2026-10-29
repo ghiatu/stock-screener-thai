@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TASCO.BK",
-    "fetch_date": "2026-10-22T02:00:24.493767",
+    "fetch_date": "2026-10-29T16:45:39.361730",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 6459410000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.466,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T02:00:24.495564"
+  "fetched_at": "2026-10-29T16:45:39.363512"
 }

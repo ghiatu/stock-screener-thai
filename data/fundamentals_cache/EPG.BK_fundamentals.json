@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "EPG.BK",
-    "fetch_date": "2026-10-22T01:52:18.374375",
+    "fetch_date": "2026-10-29T16:37:33.076881",
     "quarterly_revenue": {
       "2025-06-30 00:00:00": 3353734106.0,
       "2025-09-30 00:00:00": 3458353750.0,
@@ -35,5 +35,5 @@
     "inventory_to_sales_ratio": 1.219,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:52:18.376171"
+  "fetched_at": "2026-10-29T16:37:33.078618"
 }

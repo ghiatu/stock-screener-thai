@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "FUTURERT.BK",
-    "fetch_date": "2026-10-22T01:52:43.163309",
+    "fetch_date": "2026-10-29T16:37:58.089694",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 165472000.0,
@@ -24,5 +24,5 @@
     "eps_yoy_change": -43.07720920916624,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:52:43.163997"
+  "fetched_at": "2026-10-29T16:37:58.090540"
 }

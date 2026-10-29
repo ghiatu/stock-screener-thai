@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SAPPE.BK",
-    "fetch_date": "2026-10-22T01:58:25.158014",
+    "fetch_date": "2026-10-29T16:43:40.160183",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 1547861000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.185,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:58:25.159785"
+  "fetched_at": "2026-10-29T16:43:40.161977"
 }

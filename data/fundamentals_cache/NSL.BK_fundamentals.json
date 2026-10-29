@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "NSL.BK",
-    "fetch_date": "2026-10-22T01:56:15.292703",
+    "fetch_date": "2026-10-29T16:41:31.191112",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 1773291727.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.276,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:56:15.294438"
+  "fetched_at": "2026-10-29T16:41:31.192927"
 }

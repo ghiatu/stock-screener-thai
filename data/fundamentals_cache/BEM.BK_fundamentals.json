@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BEM.BK",
-    "fetch_date": "2026-10-22T01:50:13.165300",
+    "fetch_date": "2026-10-29T16:35:26.933522",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 3996743000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 42.63,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:50:13.166653"
+  "fetched_at": "2026-10-29T16:35:26.934861"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TPRIME.BK",
-    "fetch_date": "2026-10-22T02:01:41.324157",
+    "fetch_date": "2026-10-29T16:46:55.069104",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 198028000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 64.21,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T02:01:41.325553"
+  "fetched_at": "2026-10-29T16:46:55.070494"
 }

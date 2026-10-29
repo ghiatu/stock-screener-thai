@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "QTC.BK",
-    "fetch_date": "2026-10-22T01:57:48.306311",
+    "fetch_date": "2026-10-29T16:43:03.053950",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 425248000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.125,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:57:48.308146"
+  "fetched_at": "2026-10-29T16:43:03.055696"
 }

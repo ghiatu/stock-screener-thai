@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MII.BK",
-    "fetch_date": "2026-10-22T01:55:31.098528",
+    "fetch_date": "2026-10-29T16:40:47.023699",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 34452000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 84.25,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:55:31.099913"
+  "fetched_at": "2026-10-29T16:40:47.025152"
 }

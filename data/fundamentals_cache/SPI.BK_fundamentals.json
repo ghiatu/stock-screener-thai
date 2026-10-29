@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SPI.BK",
-    "fetch_date": "2026-10-22T01:59:38.338189",
+    "fetch_date": "2026-10-29T16:44:53.185386",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 912863000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.372,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-22T01:59:38.339973"
+  "fetched_at": "2026-10-29T16:44:53.187170"
 }
