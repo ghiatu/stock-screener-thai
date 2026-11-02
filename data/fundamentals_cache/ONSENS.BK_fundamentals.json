@@ -1,27 +1,31 @@
 {
   "data": {
     "ticker": "ONSENS.BK",
-    "fetch_date": "2026-08-28T21:11:53.501844",
+    "fetch_date": "2026-11-02T20:04:47.714555",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 70909000.0,
       "2025-06-30 00:00:00": NaN,
-      "2026-03-31 00:00:00": 71491000.0
+      "2026-03-31 00:00:00": 71491000.0,
+      "2026-06-30 00:00:00": 65884000.0
     },
-    "revenue_qoq_change": null,
+    "revenue_qoq_change": -7.842945265837657,
     "quarterly_eps": {
       "2025-03-31 00:00:00": 0.017567,
       "2025-06-30 00:00:00": NaN,
-      "2026-03-31 00:00:00": 0.02
+      "2026-03-31 00:00:00": 0.02,
+      "2026-06-30 00:00:00": 0.005
     },
-    "eps_qoq_change": null,
-    "gross_margin": 43.62,
-    "margin_change": NaN,
-    "operating_margin": 20.4,
+    "eps_qoq_change": -75.0,
+    "gross_margin": 40.23,
+    "margin_change": -3.38,
+    "operating_margin": 10.79,
     "quarterly_inventory": {
-      "2026-03-31 00:00:00": 2387000.0
+      "2026-03-31 00:00:00": 2387000.0,
+      "2026-06-30 00:00:00": 2466000.0
     },
-    "inventory_to_sales_ratio": 0.033,
+    "inventory_qoq_change": 3.31,
+    "inventory_to_sales_ratio": 0.037,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-08-28T21:11:53.503016"
+  "fetched_at": "2026-11-02T20:04:47.715522"
 }
