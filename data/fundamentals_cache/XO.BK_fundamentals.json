@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "XO.BK",
-    "fetch_date": "2026-10-29T16:48:17.091242",
+    "fetch_date": "2026-11-05T18:04:13.570495",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 607536000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.51,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-29T16:48:17.092990"
+  "fetched_at": "2026-11-05T18:04:13.572194"
 }

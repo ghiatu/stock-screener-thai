@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MBK.BK",
-    "fetch_date": "2026-10-29T16:40:28.179504",
+    "fetch_date": "2026-11-05T17:56:20.494945",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 2966769000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.592,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-10-29T16:40:28.181297"
+  "fetched_at": "2026-11-05T17:56:20.496613"
 }
