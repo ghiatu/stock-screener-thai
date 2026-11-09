@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SITHAI.BK",
-    "fetch_date": "2026-11-02T20:07:28.529448",
+    "fetch_date": "2026-11-09T20:32:45.872618",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 1779803000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.611,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:07:28.530217"
+  "fetched_at": "2026-11-09T20:32:45.874296"
 }

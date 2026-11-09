@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "III.BK",
-    "fetch_date": "2026-11-02T20:01:51.668200",
+    "fetch_date": "2026-11-09T20:27:06.741186",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 642645606.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.003,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:01:51.669245"
+  "fetched_at": "2026-11-09T20:27:06.742861"
 }

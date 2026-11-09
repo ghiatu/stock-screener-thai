@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TEAMG.BK",
-    "fetch_date": "2026-11-02T20:08:55.930416",
+    "fetch_date": "2026-11-09T20:34:12.667219",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 534897000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.001,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:08:55.931285"
+  "fetched_at": "2026-11-09T20:34:12.668885"
 }

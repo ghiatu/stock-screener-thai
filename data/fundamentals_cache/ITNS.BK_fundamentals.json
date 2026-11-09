@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ITNS.BK",
-    "fetch_date": "2026-11-02T20:02:11.539861",
+    "fetch_date": "2026-11-09T20:27:27.603744",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 121315000.0,
       "2025-06-30 00:00:00": 124221000.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.569,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:02:11.540686"
+  "fetched_at": "2026-11-09T20:27:27.605394"
 }

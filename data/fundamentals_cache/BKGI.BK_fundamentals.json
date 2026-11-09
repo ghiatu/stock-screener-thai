@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BKGI.BK",
-    "fetch_date": "2026-11-02T19:58:45.364667",
+    "fetch_date": "2026-11-09T20:24:00.499998",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 78535000.0,
       "2025-06-30 00:00:00": 69795000.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.508,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T19:58:45.365589"
+  "fetched_at": "2026-11-09T20:24:00.501641"
 }

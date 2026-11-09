@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SMART.BK",
-    "fetch_date": "2026-11-02T20:07:37.827670",
+    "fetch_date": "2026-11-09T20:32:54.606875",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 117295000.0,
       "2025-06-30 00:00:00": 92484000.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.422,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:07:37.828536"
+  "fetched_at": "2026-11-09T20:32:54.608520"
 }

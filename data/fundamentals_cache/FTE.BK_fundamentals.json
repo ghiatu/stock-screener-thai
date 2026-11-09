@@ -1,17 +1,17 @@
 {
   "data": {
     "ticker": "FTE.BK",
-    "fetch_date": "2026-11-02T20:00:59.646010",
+    "fetch_date": "2026-11-09T20:26:15.674024",
     "quarterly_revenue": {
-      "2025-03-31 00:00:00": 324748000.0,
+      "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 326928000.0,
       "2025-09-30 00:00:00": 366269000.0,
       "2025-12-31 00:00:00": 371768903.25,
       "2026-03-31 00:00:00": 421492000.0,
-      "2026-06-30 00:00:00": NaN
+      "2026-06-30 00:00:00": 486229000.0
     },
-    "revenue_qoq_change": null,
-    "revenue_yoy_change": null,
+    "revenue_qoq_change": 15.359010372676114,
+    "revenue_yoy_change": 48.726630940145846,
     "quarterly_eps": {
       "2025-03-31 00:00:00": 0.05,
       "2025-06-30 00:00:00": 0.05,
@@ -22,9 +22,9 @@
     },
     "eps_qoq_change": 0.0,
     "eps_yoy_change": 40.00000000000001,
-    "gross_margin": NaN,
-    "margin_change": NaN,
-    "operating_margin": NaN,
+    "gross_margin": 23.93,
+    "margin_change": -0.41,
+    "operating_margin": 12.37,
     "quarterly_inventory": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 424053000.0,
@@ -34,8 +34,8 @@
       "2026-06-30 00:00:00": 474114000.0
     },
     "inventory_qoq_change": 6.14,
-    "inventory_to_sales_ratio": NaN,
+    "inventory_to_sales_ratio": 0.975,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:00:59.646861"
+  "fetched_at": "2026-11-09T20:26:15.675680"
 }

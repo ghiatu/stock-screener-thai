@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TPL.BK",
-    "fetch_date": "2026-11-02T20:09:56.878841",
+    "fetch_date": "2026-11-09T20:35:13.672080",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 120333923.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.059,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:09:56.879709"
+  "fetched_at": "2026-11-09T20:35:13.673733"
 }

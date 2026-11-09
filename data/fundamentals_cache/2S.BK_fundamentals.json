@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "2S.BK",
-    "fetch_date": "2026-11-02T19:56:54.386177",
+    "fetch_date": "2026-11-09T20:22:09.534790",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 1843070000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.52,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T19:56:54.387109"
+  "fetched_at": "2026-11-09T20:22:09.536781"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "WGE.BK",
-    "fetch_date": "2026-11-02T20:11:08.070557",
+    "fetch_date": "2026-11-09T20:36:25.663304",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 582329410.65,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.138,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:11:08.071505"
+  "fetched_at": "2026-11-09T20:36:25.665122"
 }

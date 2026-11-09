@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "LDC.BK",
-    "fetch_date": "2026-11-02T20:03:03.436761",
+    "fetch_date": "2026-11-09T20:28:19.704812",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 78351702.2,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.181,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:03:03.437653"
+  "fetched_at": "2026-11-09T20:28:19.706435"
 }

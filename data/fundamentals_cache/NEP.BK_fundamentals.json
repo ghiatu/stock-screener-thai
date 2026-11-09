@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "NEP.BK",
-    "fetch_date": "2026-11-02T20:04:23.587356",
+    "fetch_date": "2026-11-09T20:29:39.604343",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 3140000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.224,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:04:23.588219"
+  "fetched_at": "2026-11-09T20:29:39.606017"
 }

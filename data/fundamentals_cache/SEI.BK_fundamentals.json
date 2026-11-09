@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SEI.BK",
-    "fetch_date": "2026-11-02T20:07:08.427902",
+    "fetch_date": "2026-11-09T20:32:25.681820",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 102289716.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.471,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:07:08.428712"
+  "fetched_at": "2026-11-09T20:32:25.683489"
 }

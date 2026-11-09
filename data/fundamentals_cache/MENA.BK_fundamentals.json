@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MENA.BK",
-    "fetch_date": "2026-11-02T20:03:41.479656",
+    "fetch_date": "2026-11-09T20:28:57.490300",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 196136947.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.021,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:03:41.480536"
+  "fetched_at": "2026-11-09T20:28:57.491920"
 }

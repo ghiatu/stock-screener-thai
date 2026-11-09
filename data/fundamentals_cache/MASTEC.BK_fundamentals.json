@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MASTEC.BK",
-    "fetch_date": "2026-11-02T20:03:27.278626",
+    "fetch_date": "2026-11-09T20:28:43.579421",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 214618229.0,
       "2025-06-30 00:00:00": NaN,
@@ -27,5 +27,5 @@
     "inventory_to_sales_ratio": 1.169,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:03:27.279449"
+  "fetched_at": "2026-11-09T20:28:43.581050"
 }

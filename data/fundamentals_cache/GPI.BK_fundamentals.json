@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "GPI.BK",
-    "fetch_date": "2026-11-02T20:01:17.336586",
+    "fetch_date": "2026-11-09T20:26:33.623004",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 271441644.77,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.097,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:01:17.338316"
+  "fetched_at": "2026-11-09T20:26:33.624691"
 }

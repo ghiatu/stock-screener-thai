@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MK.BK",
-    "fetch_date": "2026-11-02T20:03:55.456316",
+    "fetch_date": "2026-11-09T20:29:12.216639",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 345630000.0,
@@ -36,5 +36,5 @@
     "inventory_to_sales_ratio": 8.144,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:03:55.457170"
+  "fetched_at": "2026-11-09T20:29:12.219035"
 }

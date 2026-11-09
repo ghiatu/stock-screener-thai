@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ACG.BK",
-    "fetch_date": "2026-11-02T19:57:02.286677",
+    "fetch_date": "2026-11-09T20:22:17.409419",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 384817002.0,
       "2025-06-30 00:00:00": 306895549.0,
@@ -34,5 +34,5 @@
     "inventory_to_sales_ratio": 0.374,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T19:57:02.287589"
+  "fetched_at": "2026-11-09T20:22:17.411163"
 }

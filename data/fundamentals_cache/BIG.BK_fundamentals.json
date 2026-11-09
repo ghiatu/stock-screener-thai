@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BIG.BK",
-    "fetch_date": "2026-11-02T19:58:37.179646",
+    "fetch_date": "2026-11-09T20:23:52.521012",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 918041000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.651,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T19:58:37.180603"
+  "fetched_at": "2026-11-09T20:23:52.522651"
 }

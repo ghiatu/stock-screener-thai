@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "PPS.BK",
-    "fetch_date": "2026-11-02T20:05:31.481441",
+    "fetch_date": "2026-11-09T20:30:48.709588",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 83211725.0,
@@ -27,5 +27,5 @@
     "operating_margin": 3.09,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:05:31.482191"
+  "fetched_at": "2026-11-09T20:30:48.710922"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TNP.BK",
-    "fetch_date": "2026-11-02T20:09:43.107779",
+    "fetch_date": "2026-11-09T20:34:59.797001",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 742921034.54,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.7,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:09:43.108630"
+  "fetched_at": "2026-11-09T20:34:59.798719"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "NL.BK",
-    "fetch_date": "2026-11-02T20:04:29.672702",
+    "fetch_date": "2026-11-09T20:29:45.640934",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 188010910.13,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.281,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:04:29.673729"
+  "fetched_at": "2026-11-09T20:29:45.642646"
 }

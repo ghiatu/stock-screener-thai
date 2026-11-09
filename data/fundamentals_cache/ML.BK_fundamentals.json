@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ML.BK",
-    "fetch_date": "2026-11-02T20:03:56.615855",
+    "fetch_date": "2026-11-09T20:29:12.917373",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 100592000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 22.29,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:03:56.616577"
+  "fetched_at": "2026-11-09T20:29:12.918626"
 }

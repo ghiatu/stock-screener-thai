@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "FANCY.BK",
-    "fetch_date": "2026-11-02T20:00:46.347248",
+    "fetch_date": "2026-11-09T20:26:03.552215",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 750984.93,
       "2025-06-30 00:00:00": 13292817.05,
@@ -36,5 +36,5 @@
     "inventory_to_sales_ratio": NaN,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:00:46.348087"
+  "fetched_at": "2026-11-09T20:26:03.553860"
 }

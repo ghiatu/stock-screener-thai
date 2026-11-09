@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ALT.BK",
-    "fetch_date": "2026-11-02T19:57:27.283172",
+    "fetch_date": "2026-11-09T20:22:42.525276",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 389223141.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.101,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T19:57:27.284079"
+  "fetched_at": "2026-11-09T20:22:42.526848"
 }

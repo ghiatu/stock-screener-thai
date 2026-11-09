@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SAK.BK",
-    "fetch_date": "2026-11-02T20:06:38.391554",
+    "fetch_date": "2026-11-09T20:31:55.630938",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 853443339.0,
@@ -36,5 +36,5 @@
     "inventory_to_sales_ratio": 0.008,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:06:38.392447"
+  "fetched_at": "2026-11-09T20:31:55.632578"
 }

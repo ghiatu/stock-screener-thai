@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "FM.BK",
-    "fetch_date": "2026-11-02T20:00:50.446307",
+    "fetch_date": "2026-11-09T20:26:06.535246",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 1862714000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.61,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:00:50.447182"
+  "fetched_at": "2026-11-09T20:26:06.536972"
 }

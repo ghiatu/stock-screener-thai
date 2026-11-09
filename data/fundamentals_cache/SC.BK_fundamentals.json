@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SC.BK",
-    "fetch_date": "2026-11-02T20:06:49.450239",
+    "fetch_date": "2026-11-09T20:32:06.656630",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 5220169000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 5.917,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:06:49.451096"
+  "fetched_at": "2026-11-09T20:32:06.658338"
 }

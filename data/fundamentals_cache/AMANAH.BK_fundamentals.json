@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "AMANAH.BK",
-    "fetch_date": "2026-11-02T19:57:30.280258",
+    "fetch_date": "2026-11-09T20:22:45.565891",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 169708954.0,
@@ -27,5 +27,5 @@
     "operating_margin": -33.92,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T19:57:30.280970"
+  "fetched_at": "2026-11-09T20:22:45.567123"
 }

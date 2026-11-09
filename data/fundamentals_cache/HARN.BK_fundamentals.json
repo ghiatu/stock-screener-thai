@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "HARN.BK",
-    "fetch_date": "2026-11-02T20:01:32.434412",
+    "fetch_date": "2026-11-09T20:26:47.505127",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 295035000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.157,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:01:32.435263"
+  "fetched_at": "2026-11-09T20:26:47.506751"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "PQS.BK",
-    "fetch_date": "2026-11-02T20:05:32.376761",
+    "fetch_date": "2026-11-09T20:30:49.822243",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 520080947.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.461,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:05:32.377671"
+  "fetched_at": "2026-11-09T20:30:49.823927"
 }

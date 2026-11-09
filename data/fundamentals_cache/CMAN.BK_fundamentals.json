@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "CMAN.BK",
-    "fetch_date": "2026-11-02T19:59:37.623443",
+    "fetch_date": "2026-11-09T20:24:53.542824",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 1977507000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.229,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T19:59:37.624293"
+  "fetched_at": "2026-11-09T20:24:53.544522"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "GENCO.BK",
-    "fetch_date": "2026-11-02T20:01:10.472174",
+    "fetch_date": "2026-11-09T20:26:26.690767",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 56812000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 2.109,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:01:10.473022"
+  "fetched_at": "2026-11-09T20:26:26.692466"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ETC.BK",
-    "fetch_date": "2026-11-02T20:00:40.399612",
+    "fetch_date": "2026-11-09T20:25:57.705340",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 168679000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.189,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:00:40.400483"
+  "fetched_at": "2026-11-09T20:25:57.706986"
 }

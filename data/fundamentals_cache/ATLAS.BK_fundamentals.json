@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ATLAS.BK",
-    "fetch_date": "2026-11-02T19:58:02.259622",
+    "fetch_date": "2026-11-09T20:23:17.426989",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 2907594108.0,
       "2025-06-30 00:00:00": 2836839198.0,
@@ -28,5 +28,5 @@
     "inventory_to_sales_ratio": 0.095,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T19:58:02.260539"
+  "fetched_at": "2026-11-09T20:23:17.428542"
 }

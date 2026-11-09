@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "LOXLEY.BK",
-    "fetch_date": "2026-11-02T20:03:13.599956",
+    "fetch_date": "2026-11-09T20:28:29.732379",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 2651290000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.249,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:03:13.601904"
+  "fetched_at": "2026-11-09T20:28:29.734027"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "QH.BK",
-    "fetch_date": "2026-11-02T20:06:03.409142",
+    "fetch_date": "2026-11-09T20:31:20.769276",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 1713319000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 10.389,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:06:03.410011"
+  "fetched_at": "2026-11-09T20:31:20.771085"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ANAN.BK",
-    "fetch_date": "2026-11-02T19:57:38.286760",
+    "fetch_date": "2026-11-09T20:22:53.618513",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 620328000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 11.532,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T19:57:38.287653"
+  "fetched_at": "2026-11-09T20:22:53.620166"
 }

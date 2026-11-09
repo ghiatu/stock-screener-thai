@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SALEE.BK",
-    "fetch_date": "2026-11-02T20:06:39.484489",
+    "fetch_date": "2026-11-09T20:31:56.671724",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 338968000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.46,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:06:39.485428"
+  "fetched_at": "2026-11-09T20:31:56.673414"
 }

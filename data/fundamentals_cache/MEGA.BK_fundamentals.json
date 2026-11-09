@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MEGA.BK",
-    "fetch_date": "2026-11-02T20:03:40.421514",
+    "fetch_date": "2026-11-09T20:28:56.685073",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 3399350000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.02,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:03:40.422409"
+  "fetched_at": "2026-11-09T20:28:56.686712"
 }

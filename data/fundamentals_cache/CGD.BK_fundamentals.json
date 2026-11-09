@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "CGD.BK",
-    "fetch_date": "2026-11-02T19:59:19.356357",
+    "fetch_date": "2026-11-09T20:24:34.531204",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 230011431.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 8.543,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T19:59:19.357194"
+  "fetched_at": "2026-11-09T20:24:34.532896"
 }

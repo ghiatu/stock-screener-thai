@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "KSL.BK",
-    "fetch_date": "2026-11-02T20:02:50.400701",
+    "fetch_date": "2026-11-09T20:28:06.664813",
     "quarterly_revenue": {
       "2025-04-30 00:00:00": NaN,
       "2025-07-31 00:00:00": 4961340000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.555,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:02:50.401621"
+  "fetched_at": "2026-11-09T20:28:06.666456"
 }

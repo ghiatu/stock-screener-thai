@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BWG.BK",
-    "fetch_date": "2026-11-02T19:59:08.919311",
+    "fetch_date": "2026-11-09T20:24:23.631935",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 629683000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.116,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T19:59:08.920175"
+  "fetched_at": "2026-11-09T20:24:23.633614"
 }

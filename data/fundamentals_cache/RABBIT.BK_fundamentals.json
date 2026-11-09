@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "RABBIT.BK",
-    "fetch_date": "2026-11-02T20:06:11.378960",
+    "fetch_date": "2026-11-09T20:31:27.783338",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 1253453000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.052,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:06:11.379858"
+  "fetched_at": "2026-11-09T20:31:27.785207"
 }

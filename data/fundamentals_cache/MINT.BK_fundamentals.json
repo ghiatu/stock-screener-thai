@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MINT.BK",
-    "fetch_date": "2026-11-02T20:03:52.507723",
+    "fetch_date": "2026-11-09T20:29:09.088865",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 42083198000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.173,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:03:52.508589"
+  "fetched_at": "2026-11-09T20:29:09.091207"
 }

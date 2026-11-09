@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "PLAT.BK",
-    "fetch_date": "2026-11-02T20:05:18.300554",
+    "fetch_date": "2026-11-09T20:30:35.789961",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 622734000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": NaN,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:05:18.301431"
+  "fetched_at": "2026-11-09T20:30:35.791617"
 }

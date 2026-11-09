@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "PCE.BK",
-    "fetch_date": "2026-11-02T20:04:59.388504",
+    "fetch_date": "2026-11-09T20:30:16.810461",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 11173523000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.543,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:04:59.389421"
+  "fetched_at": "2026-11-09T20:30:16.812223"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SICT.BK",
-    "fetch_date": "2026-11-02T20:07:20.329411",
+    "fetch_date": "2026-11-09T20:32:37.580766",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 197228000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.642,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:07:20.330255"
+  "fetched_at": "2026-11-09T20:32:37.582399"
 }

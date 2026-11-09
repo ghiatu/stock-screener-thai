@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ICN.BK",
-    "fetch_date": "2026-11-02T20:01:46.451297",
+    "fetch_date": "2026-11-09T20:27:01.620320",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 301429000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.21,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:01:46.452124"
+  "fetched_at": "2026-11-09T20:27:01.622002"
 }

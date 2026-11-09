@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SPTX.BK",
-    "fetch_date": "2026-11-02T20:08:01.686346",
+    "fetch_date": "2026-11-09T20:33:18.665800",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 36778000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.223,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:08:01.687221"
+  "fetched_at": "2026-11-09T20:33:18.667398"
 }

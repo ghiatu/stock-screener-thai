@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "MDX.BK",
-    "fetch_date": "2026-11-02T20:03:37.544554",
+    "fetch_date": "2026-11-09T20:28:53.606785",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 52713140.27,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 9.894,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:03:37.545463"
+  "fetched_at": "2026-11-09T20:28:53.608414"
 }

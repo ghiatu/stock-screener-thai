@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "LHFG.BK",
-    "fetch_date": "2026-11-02T20:03:07.483776",
+    "fetch_date": "2026-11-09T20:28:23.711723",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 2163410000.0,
@@ -24,5 +24,5 @@
     "eps_yoy_change": 26.923076923076934,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:03:07.484294"
+  "fetched_at": "2026-11-09T20:28:23.712391"
 }

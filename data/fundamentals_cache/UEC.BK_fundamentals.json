@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "UEC.BK",
-    "fetch_date": "2026-11-02T20:10:37.945368",
+    "fetch_date": "2026-11-09T20:35:55.679122",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 148015000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.763,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:10:37.946328"
+  "fetched_at": "2026-11-09T20:35:55.680776"
 }

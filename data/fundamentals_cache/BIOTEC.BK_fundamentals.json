@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "BIOTEC.BK",
-    "fetch_date": "2026-11-02T19:58:38.271484",
+    "fetch_date": "2026-11-09T20:23:53.621679",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 933614804.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.214,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T19:58:38.272410"
+  "fetched_at": "2026-11-09T20:23:53.623355"
 }

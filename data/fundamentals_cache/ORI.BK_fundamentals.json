@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "ORI.BK",
-    "fetch_date": "2026-11-02T20:04:50.552844",
+    "fetch_date": "2026-11-09T20:30:06.736470",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 3041725000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 20.989,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:04:50.553761"
+  "fetched_at": "2026-11-09T20:30:06.738167"
 }
