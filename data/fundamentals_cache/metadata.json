@@ -568,11 +568,11 @@
     "in_earnings_season": true
   },
   "DUSIT.BK": {
-    "last_updated": "2026-11-03T17:32:13.798557",
+    "last_updated": "2026-11-11T17:42:25.745670",
     "in_earnings_season": true
   },
   "KTMS.BK": {
-    "last_updated": "2026-11-03T17:34:41.889690",
+    "last_updated": "2026-11-11T17:44:54.820005",
     "in_earnings_season": true
   },
   "MJD.BK": {
@@ -580,7 +580,7 @@
     "in_earnings_season": true
   },
   "PJW.BK": {
-    "last_updated": "2026-11-03T17:37:00.571468",
+    "last_updated": "2026-11-11T17:47:13.818641",
     "in_earnings_season": true
   },
   "ITTHI.BK": {
@@ -1997,6 +1997,14 @@
   },
   "BOL.BK": {
     "last_updated": "2026-11-10T17:28:25.849529",
+    "in_earnings_season": true
+  },
+  "APURE.BK": {
+    "last_updated": "2026-11-11T17:39:44.047587",
+    "in_earnings_season": true
+  },
+  "SAF.BK": {
+    "last_updated": "2026-11-11T17:48:36.780888",
     "in_earnings_season": true
   }
 }
