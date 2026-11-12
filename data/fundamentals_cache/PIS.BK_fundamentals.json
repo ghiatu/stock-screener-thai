@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "PIS.BK",
-    "fetch_date": "2026-11-05T17:58:01.381533",
+    "fetch_date": "2026-11-12T17:59:53.817480",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 810720985.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.313,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-05T17:58:01.383231"
+  "fetched_at": "2026-11-12T17:59:53.818541"
 }

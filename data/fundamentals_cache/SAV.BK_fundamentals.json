@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SAV.BK",
-    "fetch_date": "2026-11-05T17:59:36.328320",
+    "fetch_date": "2026-11-12T18:01:28.873920",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 476248000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 34.9,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-05T17:59:36.329745"
+  "fetched_at": "2026-11-12T18:01:28.874781"
 }

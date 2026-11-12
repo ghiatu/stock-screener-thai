@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SCGD.BK",
-    "fetch_date": "2026-11-05T17:59:44.191954",
+    "fetch_date": "2026-11-12T18:01:36.912549",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 5770123000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.293,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-05T17:59:44.193684"
+  "fetched_at": "2026-11-12T18:01:36.913652"
 }

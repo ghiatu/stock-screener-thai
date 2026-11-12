@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "WPH.BK",
-    "fetch_date": "2026-11-05T18:04:11.480363",
+    "fetch_date": "2026-11-12T18:06:04.984295",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 479409000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.124,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-05T18:04:11.482044"
+  "fetched_at": "2026-11-12T18:06:04.985371"
 }

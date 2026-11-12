@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SIS.BK",
-    "fetch_date": "2026-11-05T18:00:15.362057",
+    "fetch_date": "2026-11-12T18:02:08.041146",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 6869460000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.732,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-05T18:00:15.363746"
+  "fetched_at": "2026-11-12T18:02:08.042207"
 }

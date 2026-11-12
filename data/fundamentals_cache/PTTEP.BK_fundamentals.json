@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "PTTEP.BK",
-    "fetch_date": "2026-11-05T17:58:47.358380",
+    "fetch_date": "2026-11-12T18:00:40.039405",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 71179735000.0,
@@ -39,5 +39,5 @@
     "inventory_to_sales_ratio": 0.214,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-05T17:58:47.360112"
+  "fetched_at": "2026-11-12T18:00:40.040484"
 }

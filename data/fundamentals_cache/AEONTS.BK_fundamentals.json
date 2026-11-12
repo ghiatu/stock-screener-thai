@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "AEONTS.BK",
-    "fetch_date": "2026-11-05T17:49:57.416271",
+    "fetch_date": "2026-11-12T17:51:46.901866",
     "quarterly_revenue": {
       "2025-02-28 00:00:00": NaN,
       "2025-05-31 00:00:00": 4289851000.0,
@@ -26,5 +26,5 @@
     "eps_yoy_change": -18.553459119496864,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-05T17:49:57.416900"
+  "fetched_at": "2026-11-12T17:51:46.902377"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "QHHRREIT.BK",
-    "fetch_date": "2026-11-05T17:58:54.399443",
+    "fetch_date": "2026-11-12T18:00:46.928180",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 102975000.0,
@@ -27,5 +27,5 @@
     "operating_margin": 90.41,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-05T17:58:54.400754"
+  "fetched_at": "2026-11-12T18:00:46.929056"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "AMATA.BK",
-    "fetch_date": "2026-11-05T17:50:22.307522",
+    "fetch_date": "2026-11-12T17:52:11.885030",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 2321994000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 6.286,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-05T17:50:22.309195"
+  "fetched_at": "2026-11-12T17:52:11.886066"
 }

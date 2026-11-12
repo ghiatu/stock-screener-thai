@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "GLOBAL.BK",
-    "fetch_date": "2026-11-05T17:54:04.255185",
+    "fetch_date": "2026-11-12T17:55:55.884978",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": 8373619000.0,
       "2025-06-30 00:00:00": 8182997000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 1.772,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-05T17:54:04.257158"
+  "fetched_at": "2026-11-12T17:55:55.886006"
 }

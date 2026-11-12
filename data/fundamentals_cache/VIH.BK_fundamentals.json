@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "VIH.BK",
-    "fetch_date": "2026-11-05T18:03:46.388767",
+    "fetch_date": "2026-11-12T18:05:40.000723",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 725238000.0,
@@ -37,5 +37,5 @@
     "inventory_to_sales_ratio": 0.097,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-05T18:03:46.390506"
+  "fetched_at": "2026-11-12T18:05:40.001813"
 }

@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "TFM.BK",
-    "fetch_date": "2026-11-05T18:01:50.395504",
+    "fetch_date": "2026-11-12T18:03:43.041962",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 1475618000.0,
@@ -38,5 +38,5 @@
     "inventory_to_sales_ratio": 0.401,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-05T18:01:50.397185"
+  "fetched_at": "2026-11-12T18:03:43.043007"
 }
