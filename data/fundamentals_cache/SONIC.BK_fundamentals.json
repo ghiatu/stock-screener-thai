@@ -1,7 +1,7 @@
 {
   "data": {
     "ticker": "SONIC.BK",
-    "fetch_date": "2026-11-02T20:07:49.487383",
+    "fetch_date": "2026-11-13T17:39:00.865958",
     "quarterly_revenue": {
       "2025-03-31 00:00:00": NaN,
       "2025-06-30 00:00:00": 457015305.0,
@@ -27,5 +27,5 @@
     "operating_margin": 8.38,
     "inventory_breakdown_available": false
   },
-  "fetched_at": "2026-11-02T20:07:49.488061"
+  "fetched_at": "2026-11-13T17:39:00.866900"
 }
