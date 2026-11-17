@@ -2058,5 +2058,21 @@
   "NC.BK": {
     "last_updated": "2026-11-16T20:05:46.568571",
     "in_earnings_season": false
+  },
+  "CITY.BK": {
+    "last_updated": "2026-11-17T18:57:22.353496",
+    "in_earnings_season": false
+  },
+  "RAM.BK": {
+    "last_updated": "2026-11-17T19:04:07.419142",
+    "in_earnings_season": false
+  },
+  "ROH.BK": {
+    "last_updated": "2026-11-17T19:04:17.458940",
+    "in_earnings_season": false
+  },
+  "TIPCO.BK": {
+    "last_updated": "2026-11-17T19:07:16.448690",
+    "in_earnings_season": false
   }
 }
